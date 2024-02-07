@@ -92,7 +92,7 @@
     <section class="route">
         <div class="container">
             <div class="route__inner">
-                <p><a href="/">Главная /</a> <a href="#"><a href="directions.html">Напрвления /</a> <a href="#"></a><span>Неврология</span></a></p>
+                <p><a href="/">Главная /</a> <a href="#"><a href="directions.html">Напрвления /</a><a href="direction-page.html"> Неврология /</a> <a href="#"></a><span>Анализы</span></a></p>
             </div>
         </div>
     </section>
@@ -109,24 +109,11 @@
         <div class="container">
             <div class="direction__about-inner">
                 <div class="direction__about-img">
-                    <img src="../images/direction-img.png" alt="">
+                    <img src="../images/analysis.png" alt="">
                 </div>
                 <div class="direction__about-info">
                     <div class="direction__about-text">
-                        <p><span>Неврология</span> — область медицины, которая занимается лечением заболеваний центральной и периферической нервной системы человека.</p>
-                       
-                            <span>Симптомы неврологических заболеваний:</span>
-                            <ul>
-                                <li>головокружение, шум в ушах, повышенная утомляемость;</li>
-                                <li>бессонница, расстройство памяти; судороги, тремор, тик;</li>
-                                <li>онемение, покалывание в конечностях;</li>
-                                <li>боль в голове и других участках тела;</li>
-                                <li>потеря сознания, нарушение координации движений и равновесия;</li>
-                                <li>нарушение речи, резкое ухудшение зрения.</li>
-                            </ul>         
-                       
-
-                        <p><span>Для диагностики и назначения лечения обращайтесь к нашему врачу-неврологу.</span> Специалист исследует причины возникновения заболеваний, анализирует симптоматику болезни и определяет способы диагностики возникших проблем.</p>
+                        <p>В процессе постановки верного диагноза не обойтись без лабораторной диагностики. Результаты анализов помогают врачу оценить состояние пациента, выявить любые изменения в работе организма, своевременно обнаружить различные заболевания. В медицинском центре “ЧИНАРА” вы можете сдать анализы крови и мочи.</p>
                     </div>
 
                     <button class="button">Записаться на прием</button>
@@ -140,67 +127,51 @@
     <div class="direction__about-slider">
         <div class="container">
             <div class="direction__about-slider-category">
-                <button onclick="changeCategory('category1')">О направлении</button>
-                <button onclick="changeCategory('category2')">Услуги</button>
-                <button onclick="changeCategory('category3')">Врачи</button>
+                <button onclick="changeCategory('category1')">Об услуге</button>
+                <button onclick="changeCategory('category2')">Цены</button>
+                
                 <!-- Добавьте больше кнопок для других категорий -->
               </div>
               
               <div class="slider">
-                <div class="slide category1">О направлении</div>
-                <a href="anslysis.html">
-                    <div class="slide category2">
-                        <div class="slide__item-services">
-                            <div class="slide__item-servicesHeader">
-                                <p>Анализы</p>
-                                <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
-                                    <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                    
+                <div class="slide category1">Об услуге</div>
+                <div class="slide category2">
+                    <div class="slide__item-services">
+                        <div class="slide__item-servicesHeader">
+                            <p>Анализы</p>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 8H8M8 8H1M8 8V1M8 8V15" stroke="#456CEE" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                                
+                        </div>
+                        <div class="slide__item-servicesPrice">
+                            <div>
+                                <p>Общий анализ крови</p>
+                                <span>1 800 ₽</span>
                             </div>
                         </div>
                     </div>
-                </a>
-                <a href="anslysis.html">
-                    <div class="slide category2">
-                        <div class="slide__item-services">
-                            <div class="slide__item-servicesHeader">
-                                <p>Услуга 2</p>
-                                <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
-                                    <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                    
-                            </div>      
+                </div>
+                <div class="slide category2">
+                    <div class="slide__item-services">
+                        <div class="slide__item-servicesHeader">
+                            <p>Услуга 2</p>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 8H8M8 8H1M8 8V1M8 8V15" stroke="#456CEE" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                                
                         </div>
-                    </div>
-                </a>
-                <a href="anslysis.html">
-                    <div class="slide category2">
-                        <div class="slide__item-services">
-                            <div class="slide__item-servicesHeader">
-                                <p>Услуга 3</p>
-                                <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
-                                    <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                    
-                            </div>                    
-                        </div>
-                    </div>
-                </a>
-                <a href="anslysis.html">
-                    <div class="slide category2">
-                        <div class="slide__item-services">
-                            <div class="slide__item-servicesHeader">
-                                <p>Услуга 4</p>
-                                <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
-                                    <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                    
+                        <div class="slide__item-servicesPrice">
+                            <div>
+                                <p>Общий анализ крови</p>
+                                <span>1 800 ₽</span>
                             </div>
                         </div>
                     </div>
-                </a>
-                <div class="slide category3">Врачи</div>
+                </div>
+            
+             
+                
                 
               </div>
         </div>

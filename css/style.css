@@ -2078,9 +2078,12 @@ button.swiper-pagination-bullet {
   justify-content: center;
 }
 
-.direction__items .direction__item {
+.direction__items a {
   max-width: 610px;
   flex: clamp(42.3vw, 42.3vw, 610px);
+}
+
+.direction__items a .direction__item {
   padding: 20px;
   border: 1px solid #82898B;
   border-radius: 15px;
@@ -2088,11 +2091,11 @@ button.swiper-pagination-bullet {
   color: #505759;
 }
 
-.direction__items .direction__item .direction__item-img {
+.direction__items a .direction__item .direction__item-img {
   margin-bottom: 10px;
 }
 
-.direction__items .direction__item .direction__item-header {
+.direction__items a .direction__item .direction__item-header {
   font-family: Gilroy-Semibold;
   font-size: clamp(18px, 1.66vw, 24px);
   display: flex;
@@ -2100,7 +2103,7 @@ button.swiper-pagination-bullet {
   align-items: center;
 }
 
-.direction__items .direction__item .service__count {
+.direction__items a .direction__item .service__count {
   font-size: clamp(16px, 1.38vw, 20px);
   font-family: Gilroy-Regular;
   background-color: #BFE4F1;
@@ -2108,7 +2111,7 @@ button.swiper-pagination-bullet {
   padding: 8px 38px;
 }
 
-.direction__items .direction__item:hover {
+.direction__items a .direction__item:hover {
   box-shadow: 0px 0px 37px 8px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
@@ -2122,6 +2125,10 @@ button.swiper-pagination-bullet {
 
 .direction__about-inner .direction__about-img {
   width: 41.6vw;
+}
+
+.direction__about-inner .direction__about-img img {
+  border-radius: 15px;
 }
 
 .direction__about-inner .direction__about-info {
@@ -2199,6 +2206,15 @@ button.swiper-pagination-bullet {
 .direction__about-slider .slider .slide {
   display: none;
   width: 100%;
+  color: #505759;
+}
+
+.direction__about-slider .slider .slide .slide__item-services .slide__item-servicesHeader svg path {
+  transition: all 0.3s ease;
+}
+
+.direction__about-slider .slider .slide:hover .slide__item-services .slide__item-servicesHeader svg path {
+  stroke: #274ED0;
 }
 
 .direction__about-slider .slider .active {
@@ -2215,8 +2231,8 @@ button.swiper-pagination-bullet {
   transition: all 0.3s ease;
 }
 
-.direction__about-slider .slider .slide__item-services img {
-  transform: rotate(90deg);
+.direction__about-slider .slider .slide__item-services .slide__item-servicesHeader svg {
+  transition: all 0.3s ease;
 }
 
 .direction__about-slider .slider .slide__item-services:hover {
@@ -2247,8 +2263,135 @@ button.swiper-pagination-bullet {
 }
 
 .rotate {
-  transform: rotate(90deg);
+  transform: rotate(45deg);
   transition: transform 0.3s ease-in-out;
+}
+
+.doctors__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.doctors__items .doctors__item {
+  max-width: 400px;
+  flex: clamp(27.77vw, 27.77vw, 400px);
+  font-family: Gilroy-Regular;
+  font-size: clamp(16px, 1.38vw, 20px);
+  color: #82898B;
+  padding: 10px 20px 30px;
+  border-radius: 15px;
+  border: 1px solid #82898B;
+}
+
+.doctors__items .doctors__item .doctors__item-img {
+  margin-bottom: 30px;
+}
+
+.doctors__items .doctors__item .doctors__item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.doctors__items .doctors__item .doctors__item-info .doctors__item-name {
+  font-family: Gilroy-Semibold;
+  font-size: clamp(18px, 1.66vw, 24px);
+  color: #505759;
+}
+
+.doctors__items .doctors__item .doctors__item-info span {
+  color: #505759;
+}
+
+.doctors__items .doctors__item .doctors__item-button {
+  text-align: center;
+}
+
+.doctors__items .doctors__item .doctors__item-button button {
+  margin-bottom: 20px;
+}
+
+.doctors__items .doctors__item .doctors__item-button .doctors__item-more a {
+  color: #456CEE;
+}
+
+.doctors__inner {
+  margin-bottom: 200px;
+}
+
+.doctors__inner-button {
+  text-align: center;
+}
+
+.doctor__inner .doctor__description {
+  display: flex;
+  margin-bottom: 60px;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.doctor__inner .doctor__description .doctor__info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-family: Gilroy-Regular;
+}
+
+.doctor__inner .doctor__description .doctor__info [class^=doctor__info] {
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+  align-items: center;
+}
+
+.doctor__inner .doctor__description .doctor__info span {
+  font-size: clamp(14px, 1.25vw, 18px);
+  color: #82898B;
+  width: 160px;
+}
+
+.doctor__inner .doctor__description .doctor__info p {
+  color: #505759;
+  font-size: clamp(16px, 1.38vw, 20px);
+  width: 370px;
+  text-align: left;
+}
+
+.doctor__inner .direction__about-slider .direction__about-slider-category {
+  overflow-x: scroll;
+}
+
+.doctor__inner .direction__about-slider .slide.category1 h3 {
+  font-family: Gilroy-Semibold;
+  font-size: clamp(18px, 1.66vw, 24px);
+  color: #505759;
+  margin-bottom: 20px;
+}
+
+.doctor__inner .direction__about-slider .slide.category1 p {
+  font-family: Gilroy-Regular;
+  font-size: clamp(16px, 1.38vw, 20px);
+  color: #82898B;
+  margin-bottom: 30px;
+}
+
+.doctor__inner .direction__about-slider .slide.category1 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.doctor__inner .direction__about-slider .slide.category1 ul li {
+  font-family: Gilroy-Regular;
+  font-size: clamp(16px, 1.38vw, 20px);
+  color: #82898B;
+  list-style: disc;
+  display: list-item;
+  margin-left: 1em;
 }
 
 @font-face {
@@ -2355,6 +2498,10 @@ footer {
     gap: 15px;
   }
 
+  .doctor__inner .doctor__description .doctor__info [class^=doctor__info] {
+    gap: 35px;
+  }
+
   .container {
     max-width: 960px;
   }
@@ -2390,8 +2537,26 @@ footer {
     display: block;
   }
 
+  .direction__items a {
+    flex: 100%;
+  }
+
+  .doctor__inner .doctor__description {
+    flex-direction: column;
+  }
+
+  .doctor__inner .doctor__description .doctor__info [class^=doctor__info] {
+    gap: 35px;
+  }
+
   .container {
     max-width: 720px;
+  }
+}
+
+@media only screen and (max-width: 817px) {
+  .doctors__items .doctors__item {
+    flex: 100%;
   }
 }
 
@@ -2515,6 +2680,10 @@ footer {
     margin-bottom: 150px;
   }
 
+  .doctors__inner {
+    margin-bottom: 150px;
+  }
+
   .container {
     max-width: 540px;
   }
@@ -2618,7 +2787,32 @@ footer {
   }
 
   .direction__about-slider {
-    margin-bottom: 10px;
+    margin-bottom: 100px;
+  }
+
+  .doctors__inner {
+    margin-bottom: 100px;
+  }
+
+  .doctor__inner .doctor__description {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .doctor__inner .doctor__description .doctor__info {
+    width: 100%;
+  }
+
+  .doctor__inner .doctor__description .doctor__info [class^=doctor__info] {
+    gap: 30px;
+  }
+
+  .doctor__inner .doctor__description .doctor__info span {
+    width: 70px;
+  }
+
+  .doctor__inner .doctor__description .doctor__info p {
+    width: 200px;
   }
 
   .container {
@@ -2710,5 +2904,23 @@ footer {
 
   .consultation__form-section .consultation__form .inputs input {
     width: 250px;
+  }
+}
+
+@media only screen and (max-width: 407px) {
+  .doctor__inner .direction__about-slider .direction__about-slider-category {
+    overflow-x: scroll;
+    justify-content: space-between;
+  }
+
+  .doctor__inner .direction__about-slider .direction__about-slider-category button {
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 364px) {
+  .doctor__inner .doctor__description .doctor__info p {
+    width: 180px;
+    font-size: 14px;
   }
 }

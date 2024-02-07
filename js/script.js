@@ -168,8 +168,7 @@ $('.slide').click(function() {
   var $currentQuestion = $(this).parent();
 
 
-  $('.slide__item-servicesHeader img').removeClass('rotate');
-
+  $('.slide__item-servicesHeader svg').removeClass('rotate');
 
   if ($currentAnswer.is(':visible')) {
     $currentAnswer.slideUp();
@@ -177,7 +176,7 @@ $('.slide').click(function() {
     $('.slide__item-servicesPrice').slideUp();
     $currentAnswer.slideDown();
 
-    $(this).find('.slide__item-servicesPrice img').addClass('rotate');
+    $(this).find('svg').addClass('rotate');
   }
 });
 

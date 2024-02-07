@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+
+</head>
+<body>
+    <div class="wrapper">
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="/" class="header__logo"><img src="../../images/LOGO.svg" alt=""></a>   
+                <nav class="nav">
+                    <a href="directions.html" class="nav__link">Услуги</a>
+                    <a href="doctors.html" class="nav__link">Врачи</a>
+                    <a href="" class="nav__link">О клинике</a>
+                    <a href="" class="nav__link">Публикации</a>
+                    <a href="" class="nav__link">Услуги</a>
+                    <div class="dropdown__link">
+                        <div href="" class="nav__link dropdown__link">
+                            Пациентам
+                            <img src="../../images/header__row.svg" alt="">      
+                        </div>
+                        <div class="dropdown__content" style="box-shadow: 0px 0px 17px 11px rgba(0,0,0,0.1);">
+                            <a href="#">Часто задаваемые вопросы</a>
+                            <a href="#">Цены</a>
+                            <a href="#">Статьи</a>
+                            <a href="#">Информация для пациентов</a>
+                        </div>
+                    </div>
+                    
+    
+                    <a href="" class="nav__link">Отзывы</a>
+                </nav>
+                <div class="header__button">
+                    <div class="eye"><img src="../../images/eye.svg" alt=""></div>
+                    <button class="button">Записаться на приём</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <header class="header__adaptive">
+        <div class="container">
+            <div class="header__inner">
+                <a href="/" class="header__logo"><img src="../../images/LOGO.svg" alt=""></a>   
+                <div class="header__button">
+                    <div class="eye"><img src="../../images/eye.svg" alt=""></div>
+                    <div class="burger_menu" id="burger_menu2">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="directions.html" class="nav__link">Услуги</a>
+                <a href="doctors.html" class="nav__link">Врачи</a>
+                <a href="" class="nav__link">О клинике</a>
+                <a href="" class="nav__link">Публикации</a>
+                <a href="" class="nav__link">Услуги</a>
+                <!-- <a href="" class="nav__link">Пациентам</a> -->
+                <div class="dropdown__link">
+                    <div href="" class="nav__link dropdown__link">
+                        Пациентам
+                        <img src="../../images/header__row.svg" alt="">      
+                    </div>
+                    <div class="dropdown__content" style="box-shadow: 0px 0px 17px 11px rgba(0,0,0,0.1);">
+                        <a href="#">Часто задаваемые вопросы</a>
+                        <a href="#">Цены</a>
+                        <a href="#">Статьи</a>
+                        <a href="#">Информация для пациентов</a>
+                    </div>
+                </div>
+                <a href="" class="nav__link">Отзывы</a>
+            </nav>
+        </div>
+    </header>
+    
+    
+    
+   
+
+    <section class="route">
+        <div class="container">
+            <div class="route__inner">
+                <p><a href="/">Главная /</a> <a href="doctors.html"> Врачи / </a> <a href="#"></a><span>Османова Эльмаз Руслановна</span></a></p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="directions__header section__header">
+            <h2>Османова Эльмаз Руслановна</h2>
+        </div>
+    </div>
+
+    <section class="doctor">
+        <div class="container">
+            <div class="doctor__inner">
+                <div class="doctor__description">
+                    <div class="doctor__img"><img src="../images/doctor__img.png" alt=""></div>
+                    <div class="doctor__info">
+                        <div class="doctor__info-direction">
+                            <span>Направление</span>
+                            <p>Ультразвуковая диагностика</p>
+                        </div>
+                        <div class="doctor__info-speciality">
+                            <span>Специальность</span>
+                            <p>Врач ультразвуковой диагностики</p>
+                        </div>
+                        <div class="doctor__info-category">
+                            <span>Категория</span>
+                            <p>Врач высшей квалификационной категории</p>
+                        </div>
+                        <div class="doctor__info-degree">
+                            <span>Ученая степень</span>
+                            <p>Доктор медицинских наук</p>
+                        </div>
+                        <div class="doctor__info-experience">
+                            <span>Стаж работы</span>
+                            <p>11 лет</p>
+                        </div>
+                       <div class="doctor__info-button">
+                        <button class="button">Записаться на прием</button>
+                       </div>
+                    </div>
+                   
+                </div>
+
+
+                <div class="direction__about-slider">
+                    <div class="container">
+                        <div class="direction__about-slider-category">
+                            <button onclick="changeCategory('category1')">О Враче</button>
+                            <button onclick="changeCategory('category2')">Услуги</button>
+                            <button onclick="changeCategory('category3')">Сертификаты</button>
+                            <button onclick="changeCategory('category4')">Отзывы</button>
+                            <!-- Добавьте больше кнопок для других категорий -->
+                          </div>
+                          
+                          <div class="slider">
+                            <div class="slide category1">
+                                <h3>Опыт работы</h3>
+                                <p>Предварительные выводы неутешительны: консультация с широким активом предоставляет широкие возможности для модели развития. Также как реализация намеченных плановых заданий способствует повышению качества дальнейших направлений развития! Ясность нашей позиции очевидна: повышение уровня гражданского сознания требует определения и уточнения дальнейших направлений развития. Банальные, но неопровержимые выводы, а также реплицированные с зарубежных источников, современные исследования, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут представлены в исключительно положительном свете.</p>
+                                <h3>Образование</h3>
+                                <p>
+                                    <ul>
+                                        <li>1994г. Минский ордена Трудового Красного Знамени государственный медицинский институт</li>
+                                        <li>1995г. Стажировка на базе БелНИИ пульмонологии и фтизиатрии по специальности «Врач-хирург»</li>
+                                        <li>2001г. Клиническая ординатура на базе БелМАПО по специальности «Хирургия»</li>
+                                        <li>2010г. Переподготовка на базе БелМАПО по специальности «Проктология»</li>
+                                    </ul>
+                                </p>
+                                <h3>Повышение квалификации</h3>
+                                <p>
+                                    <ul>
+                                        <li>2005г. «Колопроктология и абдоминальная хирургия»</li>
+                                        <li>2005г. «Лапароскопическая холецистэктомия»</li>
+                                        <li>2014г. «Лазерная хирургия»</li>
+                                        <li>2014г. «Особенности управления, экономики и финансирования здравоохранения в современных условиях»</li>
+                                        <li>2019г. «Амбулаторная и малоинвазивная проктология»</li>
+                                        <li>2021г. «Актуальные вопросы оказания неотложной медицинской помощи на амбулаторном этапе»</li>
+                                    </ul>
+                                </p>
+
+                                     
+                            </div>
+                            <a href="anslysis.html">
+                                <div class="slide category2">
+                                    <div class="slide__item-services">
+                                        <div class="slide__item-servicesHeader">
+                                            <p>Анализы</p>
+                                            <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
+                                                <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                                
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="anslysis.html">
+                                <div class="slide category2">
+                                    <div class="slide__item-services">
+                                        <div class="slide__item-servicesHeader">
+                                            <p>Услуга 2</p>
+                                            <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
+                                                <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                                
+                                        </div>      
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="anslysis.html">
+                                <div class="slide category2">
+                                    <div class="slide__item-services">
+                                        <div class="slide__item-servicesHeader">
+                                            <p>Услуга 3</p>
+                                            <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
+                                                <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                                
+                                        </div>                    
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="anslysis.html">
+                                <div class="slide category2">
+                                    <div class="slide__item-services">
+                                        <div class="slide__item-servicesHeader">
+                                            <p>Услуга 4</p>
+                                            <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
+                                                <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                                
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="slide category3">Сертификаты</div>
+                            <div class="slide category4">Отзывы</div>
+                          </div>
+                    </div>
+                </div>
+
+
+
+                
+            </div>
+        </div>
+    </section>
+
+    
+
+    
+
+    </div>
+    <footer class="footer"  style="background: url(../../images/Footer_bg.svg); background-repeat: no-repeat;background-size: cover; background-position: center;">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__logo">
+                    <a href="/"><img src="../../images/LOGO.svg" alt=""></a>
+                    <p>ОГРН: 1149102063439</p>
+                    <p>ИНН: 9105001618</p>
+                    <p>КПП: 910501001</p>
+                    <a href="#header"><div class="scroll_button">Наверх</div></a>
+                </div>
+    
+                <div class="footer__navigation">
+                    <div class="navigation__header">НАВИГАЦИЯ</div>
+                    <div class="navigation__items">
+                        <a href="directions.html" class="navigation__link">Услуги</a>
+                        <a href="doctors.html" class="navigation__link">О клинике</a>
+                        <a href="" class="navigation__link">Пациентам</a>
+                        <a href="" class="navigation__link">Врачи</a>
+                        <a href="" class="navigation__link">Публикации</a>
+                        <a href="" class="navigation__link">Отзывы</a>
+                    </div>
+                </div>
+    
+                <div class="footer__contacts">
+                    <div class="footer__contacts-header">КОНТАКТЫ</div>
+                    <div class="footer__contacts-address">г. Джанкой, ул. Ленина, 23</div>
+                    <div class="footer__contacts-phone">
+                        <p>+7 (978) 866-79-53</p>
+                        <p>+7 (978) 741-93-00</p>
+                    </div>
+                    <div class="footer__contacts-mail">marvaslup@mail.ru</div>
+                    <div class="footer__contacts-time">
+                        <p>Пн-Сб: 9:00 - 21.00</p>
+                        <p>Вс: 10:00 - 20:00</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="policy">
+                <span>Лицензия № Л041-01133-77/00366659 от 19.09.2019 г.</span>
+                <a href="#">Пользовательское соглашение</a>
+                <a href="#">Соглашение об обработке персональных данных</a>
+            </div>
+            <div class="naming">
+                <p>© 2018-2023 ООО "ЧИНАРА-МЕДИЦИНСКИЙ ЦЕНТР НАДЕЖДА"</p>
+                <div class="builded">
+                    <span>Разработано:</span>
+                    <img src="../../images/arbim.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        
+
+      </script>
+
+      <style>
+        
+      </style>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
