@@ -2394,6 +2394,96 @@ button.swiper-pagination-bullet {
   margin-left: 1em;
 }
 
+.public__inner {
+  margin-bottom: 200px;
+}
+
+.public__inner .public__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.public__inner .public__items .public__item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 610px;
+  flex: clamp(42.3vw, 42.3vw, 610px);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #82898B;
+}
+
+.public__inner .public__items .public__item .public__item-info .public__item-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Gilroy-Medium;
+  font-size: clamp(14px, 1.25vw, 18px);
+  color: #456CEE;
+  margin-bottom: 20px;
+}
+
+.public__inner .public__items .public__item .public__item-info .public__item-header {
+  font-family: Gilroy-Semibold;
+  font-size: clamp(18px, 1.66vw, 24px);
+  color: #505759;
+  margin-bottom: 10px;
+}
+
+.public__inner .public__items .public__item .public__item-info .public__item-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: Gilroy-Regular;
+  font-size: clamp(16px, 1.38vw, 20px);
+  color: #82898B;
+  background-image: -webkit-linear-gradient(273deg, #82898B, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.public__inner .public__items .public__item .public__item-info .public__item-author {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.public__inner .public__items .public__item .public__item-info .public__item-author .public__item-author-info span {
+  font-family: Gilroy-Medium;
+  font-size: clamp(14px, 1.25vw, 18px);
+  color: #456CEE;
+  margin-bottom: 10px;
+}
+
+.public__inner .public__items .public__item .public__item-info .public__item-author .public__item-author-info h4 {
+  font-family: Gilroy-Medium;
+  font-size: clamp(16px, 1.38vw, 20px);
+  color: #505759;
+  margin-bottom: 5px;
+}
+
+.public__inner .public__items .public__item .public__item-info .public__item-author .public__item-author-info p {
+  font-family: Gilroy-Regular;
+  font-size: clamp(14px, 1.25vw, 18px);
+  color: #82898B;
+}
+
+.public__inner .public__items .public__item .public__item-button {
+  text-align: center;
+}
+
+.public__inner .public__inner-button {
+  width: 100%;
+  text-align: center;
+}
+
 @font-face {
   font-family: Gilroy-Bold;
   src: url("../fonts/gilroy-bold.ttf");
@@ -2549,6 +2639,10 @@ footer {
     gap: 35px;
   }
 
+  .public__inner .public__items .public__item {
+    flex: 100%;
+  }
+
   .container {
     max-width: 720px;
   }
@@ -2684,6 +2778,10 @@ footer {
     margin-bottom: 150px;
   }
 
+  .public__inner {
+    margin-bottom: 150px;
+  }
+
   .container {
     max-width: 540px;
   }
@@ -2813,6 +2911,10 @@ footer {
 
   .doctor__inner .doctor__description .doctor__info p {
     width: 200px;
+  }
+
+  .public__inner {
+    margin-bottom: 100px;
   }
 
   .container {
