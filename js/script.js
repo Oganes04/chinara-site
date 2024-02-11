@@ -32,6 +32,22 @@ var swiperStocks = new Swiper(".stocksSwiper", {
   },
 });
 
+
+var swiper = new Swiper(".gallerySwiper", {
+  slidesPerView: "auto",
+ 
+  spaceBetween: 30,
+  pagination: {
+    el: ".stocksSwiper__swiper-pagination",
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: ".stocksSwiper__button-next",
+    prevEl: ".stocksSwiper__button-prev",
+  },
+});
+
 // var mql = window.matchMedia("(max-width: 1200px)");
 // var mql2 = window.matchMedia("(max-width: 1050px)");
 // var mql3 = window.matchMedia("(max-width: 740px)");
