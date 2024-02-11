@@ -2693,6 +2693,7 @@ button.swiper-pagination-bullet {
   gap: 40px;
   margin-bottom: 40px;
   padding-bottom: 12px;
+  border-bottom: 1px solid #82898B;
 }
 
 .page__menu-inner a {
@@ -3014,6 +3015,241 @@ button.swiper-pagination-bullet {
   margin-bottom: 0;
 }
 
+.for__patients-menu {
+  margin-bottom: 120px;
+}
+
+.prices {
+  margin-bottom: 200px;
+}
+
+.prices__header {
+  margin-bottom: 60px;
+}
+
+.prices__block-menu .prices__menu-item {
+  width: 400px;
+  padding: 30px;
+  font-family: Gilroy-Semibold;
+  font-size: clamp(18px, 1.66vw, 24px);
+  color: #82898B;
+  border-radius: 15px;
+  border: 1px solid #82898B;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prices__block-menu .prices__menu-item svg {
+  transition: all 0.3s ease;
+}
+
+.prices__block-menu .prices__menu-item:hover {
+  box-shadow: 0px 0px 37px 8px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.prices__block {
+  display: flex;
+  gap: 20px;
+}
+
+.prices__block .prices__block-price__list {
+  flex: 1;
+}
+
+.prices__block .prices__block-price__list .price__list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: Gilroy-Bold;
+  font-size: clamp(20px, 2.22vw, 32px);
+  color: #505759;
+  margin-bottom: 30px;
+}
+
+.prices__block .prices__block-price__list .price__list-reception .price__list-category__header {
+  font-family: Gilroy-Semibold;
+  font-size: clamp(18px, 1.66vw, 24px);
+  color: #505759;
+  background-color: #BFE4F1;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.prices__block .prices__block-price__list .price__list-reception .reception__items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.prices__block .prices__block-price__list .price__list-reception .reception__items .reception__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 10px 30px;
+}
+
+.prices__block .prices__block-price__list .price__list-reception .reception__items .reception__item p {
+  max-width: 475px;
+  font-family: Gilroy-Regular;
+  font-size: clamp(16px, 1.38vw, 20px);
+  color: #505759;
+  line-height: 28px;
+  letter-spacing: 2%;
+}
+
+.prices__block .prices__block-price__list .price__list-reception .reception__items .reception__item span {
+  font-family: Gilroy-Regular;
+  font-size: clamp(18px, 1.66vw, 24px);
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+.prices__block .prices__block-price__list .price__list-procedures .price__list-category__header {
+  font-family: Gilroy-Semibold;
+  font-size: clamp(18px, 1.66vw, 24px);
+  color: #505759;
+  background-color: #BFE4F1;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.prices__block .prices__block-price__list .price__list-procedures .procedures__items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.prices__block .prices__block-price__list .price__list-procedures .procedures__items .procedures__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 20px 30px;
+  border-bottom: 1px solid #82898B;
+}
+
+.prices__block .prices__block-price__list .price__list-procedures .procedures__items .procedures__item p {
+  max-width: 475px;
+  font-family: Gilroy-Regular;
+  font-size: clamp(16px, 1.38vw, 20px);
+  color: #505759;
+  line-height: 28px;
+  letter-spacing: 2%;
+}
+
+.prices__block .prices__block-price__list .price__list-procedures .procedures__items .procedures__item span {
+  font-family: Gilroy-Regular;
+  font-size: clamp(18px, 1.66vw, 24px);
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+.legal__information {
+  margin-bottom: 200px;
+}
+
+.legal__information .slider {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.legal__information .slider .slide {
+  display: block;
+  width: 100%;
+  color: #505759;
+}
+
+.legal__information .slider .slide .slide__item-services .slide__item-servicesHeader svg path {
+  transition: all 0.3s ease;
+}
+
+.legal__information .slider .slide:hover .slide__item-services .slide__item-servicesHeader svg path {
+  stroke: #274ED0;
+}
+
+.legal__information .slider .slide__item-services {
+  padding: 30px;
+  font-family: Gilroy-Medium;
+  font-size: clamp(14px, 1.25vw, 18px);
+  border-radius: 15px;
+  border: 1px solid #82898B;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.legal__information .slider .slide__item-services .slide__item-servicesHeader svg {
+  transition: all 0.3s ease;
+  width: 12px;
+  height: 6px;
+}
+
+.legal__information .slider .slide__item-services .slide__item-servicesHeader svg path {
+  width: 4px;
+  height: 10px;
+}
+
+.legal__information .slider .slide__item-services .slide__item-servicesHeader p {
+  max-width: 96%;
+}
+
+.legal__information .slider .slide__item-services:hover {
+  box-shadow: 0px 0px 37px 8px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.legal__information .slider .slide__item-services .slide__item-servicesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.legal__information ul li {
+  margin-bottom: 20px;
+  font-family: Gilroy-Regular;
+  color: #82898B;
+  font-size: clamp(16px, 1.38vw, 20px);
+  line-height: 28px;
+  letter-spacing: 2%;
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.legal__information ul li a {
+  margin-bottom: 20px;
+  font-family: Gilroy-Regular;
+  color: #456CEE;
+  font-size: clamp(16px, 1.38vw, 20px);
+  line-height: 28px;
+  letter-spacing: 2%;
+}
+
+.legal__header {
+  margin-bottom: 30px;
+}
+
+.info__page-text {
+  margin-bottom: 20px;
+  font-family: Gilroy-Regular;
+  color: #82898B;
+  font-size: clamp(16px, 1.38vw, 20px);
+  line-height: 28px;
+  letter-spacing: 2%;
+}
+
+.legal__title h2 {
+  font-family: Gilroy-Bold;
+  font-size: clamp(20px, 2.22vw, 32px);
+  color: #505759;
+  letter-spacing: 4%;
+  margin-bottom: 30px;
+}
+
 @font-face {
   font-family: Gilroy-Bold;
   src: url("../fonts/gilroy-bold.ttf");
@@ -3137,6 +3373,14 @@ footer {
     align-items: center;
   }
 
+  .prices__block .prices__block-price__list .price__list-reception .reception__items .reception__item p {
+    max-width: 425px;
+  }
+
+  .prices__block .prices__block-price__list .price__list-procedures .procedures__items .procedures__item p {
+    max-width: 425px;
+  }
+
   .container {
     max-width: 960px;
   }
@@ -3207,7 +3451,7 @@ footer {
   }
 
   .in__numbers .in__numbers-inner .in__numbers-line .in__numbers-items.second__line {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .in__numbers .in__numbers-inner .in__numbers-line .in__numbers-items .in__numbers-item,
@@ -3220,6 +3464,34 @@ footer {
   .in__numbers .in__numbers-inner .in__numbers-line .in__numbers-items .in__numbers-item.second .in__numbers-item__img img {
     width: 100px;
     height: 100px;
+  }
+
+  .prices__block {
+    flex-direction: column;
+  }
+
+  .prices__block .prices__menu-item {
+    width: 100%;
+  }
+
+  .prices__block .prices__block-price__list .price__list-reception .reception__items .reception__item {
+    padding: 10px 0;
+  }
+
+  .prices__block .prices__block-price__list .price__list-reception .reception__items .reception__item p {
+    max-width: 425px;
+  }
+
+  .prices__block .prices__block-price__list .price__list-procedures .procedures__items .procedures__item {
+    padding: 10px 0;
+  }
+
+  .prices__block .prices__block-price__list .price__list-procedures .procedures__items .procedures__item p {
+    max-width: 425px;
+  }
+
+  .legal__information .slider .slide__item-services .slide__item-servicesHeader p {
+    max-width: 85%;
   }
 
   .container {
@@ -3371,6 +3643,30 @@ footer {
 
   .page__menu.about__clinic-menu .page__menu-inner a {
     white-space: nowrap;
+  }
+
+  .in__numbers,
+  .gallery,
+  .why,
+  .documents,
+  .vacancy {
+    margin-bottom: 150px;
+  }
+
+  .container {
+    max-width: 540px;
+  }
+
+  .prices {
+    margin-bottom: 150px;
+  }
+
+  .for__patients-menu {
+    margin-bottom: 100px;
+  }
+
+  .legal__information {
+    margin-bottom: 150px;
   }
 
   .container {
@@ -3553,6 +3849,34 @@ footer {
   .vacancy .vacancy__inner .vacancy__items .vacancy__item .vacancy__item-info {
     justify-content: space-between;
     gap: 20px;
+  }
+
+  .in__numbers,
+  .gallery,
+  .why,
+  .documents,
+  .vacancy {
+    margin-bottom: 100px;
+  }
+
+  .prices__block .prices__block-price__list .price__list-reception .reception__items .reception__item p {
+    max-width: 200px;
+  }
+
+  .prices__block .prices__block-price__list .price__list-procedures .procedures__items .procedures__item p {
+    max-width: 200px;
+  }
+
+  .prices {
+    margin-bottom: 100px;
+  }
+
+  .for__patients-menu {
+    margin-bottom: 60px;
+  }
+
+  .legal__information {
+    margin-bottom: 100px;
   }
 
   .container {
