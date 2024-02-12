@@ -219,3 +219,67 @@ $('#radio__clinic').click(function() {
 
 
 
+// $('#prices__menu-item-1').click(function() {
+//   $('#price-list-1').show();
+// }).not(this).each(function() {
+//   $('#price-list-1').hide(); 
+// });
+
+
+// $('#prices__menu-item-2').click(function() {
+//   $('#price-list-2').show();
+// }).not(this).each(function() {
+//   $('#price-list-2').hide(); 
+// });
+
+
+// $('#prices__menu-item-3').click(function() {
+//   $('#price-list-3').show();
+// }).not(this).each(function() {
+//   $('#price-list-3').hide(); 
+// });
+
+// $('#prices__menu-item-2').click(function() {
+//   $('#price-list-4').show();
+// }).not(this).each(function() {
+//   $('#price-list-4').hide(); 
+// });
+
+
+// Общие классы для пункта меню и прайс-листа
+const menuItemsSelector = '.prices__menu-item';
+const priceListsSelector = '.prices__block-price__list';
+
+// Переменная для хранения текущего активного пункта меню
+// Переменная для хранения текущего активного пункта меню
+let activeMenuItem = null;
+
+// Обработчик клика по пунктам меню
+$(document).on('click', menuItemsSelector, function() {
+  // Скрываем все прайс-листы
+  $(priceListsSelector).hide();
+
+  // Получаем   номер прайс-листа из ID пункта меню
+  let listNumber = $(this).attr('id').split('-').pop();
+
+  // Показываем соответствующий прайс-лист
+  $('#price-list-' + listNumber).show();
+
+  // Если было ранее активное меню, удаляем у него класс 'rotate' и 'box-shadow'
+  if (activeMenuItem) {
+    activeMenuItem.find('svg').removeClass('rotate');
+    activeMenuItem.css('box-shadow', 'none');
+  }
+
+  // Добавляем класс 'rotate' к SVG элементу текущего активного пункта меню
+  $(this).find('svg').addClass('rotate');
+  $(this).css('box-shadow', '0px  0px  37px  8px rgba(0,0,0,0.1),0px  10px  15px -3px rgba(0,0,0,0.1)');
+
+  // Обновляем активный пункт меню
+  activeMenuItem = $(this);
+});
+
+
+
+
+

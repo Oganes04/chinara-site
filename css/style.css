@@ -3110,6 +3110,7 @@ button.swiper-pagination-bullet {
 
 .prices__block .prices__block-price__list {
   flex: 1;
+  display: none;
 }
 
 .prices__block .prices__block-price__list .price__list-header {
