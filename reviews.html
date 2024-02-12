@@ -85,6 +85,10 @@
         </div>
     </header>
     
+    <div class="call__button">
+        <img src="../../images/call.svg" alt="">
+    </div>
+    
     
     
    
@@ -197,11 +201,11 @@
                     <div class="reviews__form-header">Оставить отзыв</div>
                     <div class="reviews__form-rating">
                         <div class="reviews__form-rating__stars">
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star fa-star-rating"></i>
+                            <i class="fa-regular fa-star fa-star-rating"></i>
+                            <i class="fa-regular fa-star fa-star-rating"></i>
+                            <i class="fa-regular fa-star fa-star-rating"></i>
+                            <i class="fa-regular fa-star fa-star-rating"></i>
                         </div>
                         <span> - Ваша оценка</span>
                     </div>
@@ -210,20 +214,22 @@
                     
                     <div class="reviews__form-selection">
                         <div class="reviews__form-selection-item">
-                            <input type="radio" id="option1" name="options" value="option1">
-                            <label for="option1">Врач</label><br>
+                            <input type="radio" id="radio__doctor" name="options" value="option1">
+                            <label for="radio__doctor">Врач</label><br>
                         </div>
                         <div class="reviews__form-selection-item">
-                            <input type="radio" id="option2" name="options" value="option2">
-                            <label for="option2">Центр</label><br>
+                            <input type="radio" id="radio__clinic" name="options" value="option2">
+                            <label for="radio__clinic">Центр</label><br>
                         </div>
                     </div>
 
-                    <select class="reviews__form-select__doctor" id="doctorList" name="doctorList">
-                        <option value="">Врач</option>
-                        <option value="name1">Османова Эльмаз Руслановна</option>
-                        <option value="name2">сманова Эльмаз Руслановна</option>
-                    </select>
+                    <div class="reviews__form-selector__doctor" id="doctorSelector">
+                        <select class="reviews__form-select__doctor" id="doctorList" name="doctorList">
+                            <option value="">Врач</option>
+                            <option value="name1">Османова Эльмаз Руслановна</option>
+                            <option value="name2">сманова Эльмаз Руслановна</option>
+                        </select>
+                    </div>
 
                     <div class="reviews__form-text">
                         <textarea type="text" id="textfield" name="textfield" placeholder="Ваш отзыв"></textarea>
@@ -311,13 +317,33 @@
         </div>
     </footer>
     <script>
-        
+// Получаем все звезды
+const stars = document.querySelectorAll('.fa-star-rating');
 
-      </script>
+// Функция для обновления классов звезд
+function updateStars(selectedStar) {
+  // Сброс всех звезд до состояния по умолчанию
+  stars.forEach(star => {
+    star.classList.replace('fa-solid', 'fa-regular');
+  });
 
-      <style>
-        
-      </style>
+  // Установка выбранной звезды и всех предыдущих ей
+  for (let i =  0; i <= selectedStar; i++) {
+    stars[i].classList.replace('fa-regular', 'fa-solid');
+  }
+}
+
+// Добавляем обработчик события click на каждую звезду
+stars.forEach((star, index) => {
+  star.addEventListener('click', () => {
+    updateStars(index);
+    // Здесь можно сохранить выбранный рейтинг, например, в переменную или отправить его на сервер
+  });
+});
+
+
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
     

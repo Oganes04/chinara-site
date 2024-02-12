@@ -205,3 +205,17 @@ $('.direction__about-slider-category button').click(function() {
   $(this).addClass('active__category-button');
 
 });
+
+$('#radio__doctor').click(function() {
+    $('#doctorSelector').show();
+
+});
+
+$('#radio__clinic').click(function() {
+  $('#doctorSelector').hide();
+
+});
+
+
+
+
