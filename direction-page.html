@@ -13,7 +13,8 @@
 </head>
 <body>
     <div class="wrapper">
-    <header class="header" id="header">
+    <div id="header">
+    <header class="header">
         <div class="container">
             <div class="header__inner">
                 <a href="/" class="header__logo"><img src="../../images/LOGO.svg" alt=""></a>   
@@ -82,7 +83,7 @@
             </nav>
         </div>
     </header>
-    
+    </div>
     <div class="call__button">
         <img src="../../images/call.svg" alt="">
     </div>
@@ -141,72 +142,92 @@
         </div>
     </div>
    
+   
+
+
+
     <div class="direction__about-slider">
         <div class="container">
             <div class="direction__about-slider-category">
-                <button onclick="changeCategory('category1')">О направлении</button>
+                <button class="active__category-button" onclick="changeCategory('category1')">О направлении</button>
                 <button onclick="changeCategory('category2')">Услуги</button>
                 <button onclick="changeCategory('category3')">Врачи</button>
-                <!-- Добавьте больше кнопок для других категорий -->
+               
               </div>
               
-              <div class="slider">
-                <div class="slide category1">О направлении</div>
-                <a href="anslysis.html">
-                    <div class="slide category2">
-                        <div class="slide__item-services">
-                            <div class="slide__item-servicesHeader">
-                                <p>Анализы</p>
-                                <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
-                                    <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                    
+              <div class="swiper menuSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slider__inner">
+                        О направлении
+                    </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="slider__inner">
+                           
+                        <a href="anslysis.html">
+                            <div class="slide">
+                                <div class="slide__item-services">
+                                    <div class="slide__item-servicesHeader">
+                                        <p>Анализы</p>
+                                        <svg width="20" height="10" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
+                                            <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                            
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="anslysis.html">
-                    <div class="slide category2">
-                        <div class="slide__item-services">
-                            <div class="slide__item-servicesHeader">
-                                <p>Услуга 2</p>
-                                <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
-                                    <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                    
-                            </div>      
-                        </div>
-                    </div>
-                </a>
-                <a href="anslysis.html">
-                    <div class="slide category2">
-                        <div class="slide__item-services">
-                            <div class="slide__item-servicesHeader">
-                                <p>Услуга 3</p>
-                                <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
-                                    <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                    
-                            </div>                    
-                        </div>
-                    </div>
-                </a>
-                <a href="anslysis.html">
-                    <div class="slide category2">
-                        <div class="slide__item-services">
-                            <div class="slide__item-servicesHeader">
-                                <p>Услуга 4</p>
-                                <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
-                                    <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                    
+                        </a>
+                        <a href="anslysis.html">
+                            <div class="slide">
+                                <div class="slide__item-services">
+                                    <div class="slide__item-servicesHeader">
+                                        <p>Услуга 2</p>
+                                        <svg width="20" height="10" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
+                                            <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                            
+                                    </div>      
+                                </div>
                             </div>
+                        </a>
+                        <a href="anslysis.html">
+                            <div class="slide">
+                                <div class="slide__item-services">
+                                    <div class="slide__item-servicesHeader">
+                                        <p>Услуга 3</p>
+                                        <svg width="20" height="10" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
+                                            <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                            
+                                    </div>                    
+                                </div>
+                            </div>
+                        </a>
+                        <a href="anslysis.html">
+                            <div class="slide">
+                                <div class="slide__item-services">
+                                    <div class="slide__item-servicesHeader">
+                                        <p>Услуга 4</p>
+                                        <svg width="20" height="10" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
+                                            <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                            
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                         </div>
                     </div>
-                </a>
-                <div class="slide category3">Врачи</div>
-                
-              </div>
+
+                    <div class="swiper-slide">
+                        <div class="slider__inner">
+                            Врачи
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

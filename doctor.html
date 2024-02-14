@@ -13,7 +13,8 @@
 </head>
 <body>
     <div class="wrapper">
-    <header class="header" id="header">
+    <div id="header">
+    <header class="header">
         <div class="container">
             <div class="header__inner">
                 <a href="/" class="header__logo"><img src="../../images/LOGO.svg" alt=""></a>   
@@ -82,7 +83,7 @@
             </nav>
         </div>
     </header>
-    
+    </div>
     <div class="call__button">
         <img src="../../images/call.svg" alt="">
     </div>
@@ -142,96 +143,115 @@
                 <div class="direction__about-slider">
                     <div class="container">
                         <div class="direction__about-slider-category">
-                            <button onclick="changeCategory('category1')">О Враче</button>
+                            <button class="active__category-button" onclick="changeCategory('category1')">О Враче</button>
                             <button onclick="changeCategory('category2')">Услуги</button>
                             <button onclick="changeCategory('category3')">Сертификаты</button>
                             <button onclick="changeCategory('category4')">Отзывы</button>
-                            <!-- Добавьте больше кнопок для других категорий -->
                           </div>
                           
-                          <div class="slider">
-                            <div class="slide category1">
-                                <h3>Опыт работы</h3>
-                                <p>Предварительные выводы неутешительны: консультация с широким активом предоставляет широкие возможности для модели развития. Также как реализация намеченных плановых заданий способствует повышению качества дальнейших направлений развития! Ясность нашей позиции очевидна: повышение уровня гражданского сознания требует определения и уточнения дальнейших направлений развития. Банальные, но неопровержимые выводы, а также реплицированные с зарубежных источников, современные исследования, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут представлены в исключительно положительном свете.</p>
-                                <h3>Образование</h3>
-                                <p>
-                                    <ul>
-                                        <li>1994г. Минский ордена Трудового Красного Знамени государственный медицинский институт</li>
-                                        <li>1995г. Стажировка на базе БелНИИ пульмонологии и фтизиатрии по специальности «Врач-хирург»</li>
-                                        <li>2001г. Клиническая ординатура на базе БелМАПО по специальности «Хирургия»</li>
-                                        <li>2010г. Переподготовка на базе БелМАПО по специальности «Проктология»</li>
-                                    </ul>
-                                </p>
-                                <h3>Повышение квалификации</h3>
-                                <p>
-                                    <ul>
-                                        <li>2005г. «Колопроктология и абдоминальная хирургия»</li>
-                                        <li>2005г. «Лапароскопическая холецистэктомия»</li>
-                                        <li>2014г. «Лазерная хирургия»</li>
-                                        <li>2014г. «Особенности управления, экономики и финансирования здравоохранения в современных условиях»</li>
-                                        <li>2019г. «Амбулаторная и малоинвазивная проктология»</li>
-                                        <li>2021г. «Актуальные вопросы оказания неотложной медицинской помощи на амбулаторном этапе»</li>
-                                    </ul>
-                                </p>
-
-                                     
+                          <div class="swiper menuSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="slider__inner">
+                                        <div class="slide category1">
+                                            <h3>Опыт работы</h3>
+                                            <p>Предварительные выводы неутешительны: консультация с широким активом предоставляет широкие возможности для модели развития. Также как реализация намеченных плановых заданий способствует повышению качества дальнейших направлений развития! Ясность нашей позиции очевидна: повышение уровня гражданского сознания требует определения и уточнения дальнейших направлений развития. Банальные, но неопровержимые выводы, а также реплицированные с зарубежных источников, современные исследования, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут представлены в исключительно положительном свете.</p>
+                                            <h3>Образование</h3>
+                                            <p>
+                                                <ul>
+                                                    <li>1994г. Минский ордена Трудового Красного Знамени государственный медицинский институт</li>
+                                                    <li>1995г. Стажировка на базе БелНИИ пульмонологии и фтизиатрии по специальности «Врач-хирург»</li>
+                                                    <li>2001г. Клиническая ординатура на базе БелМАПО по специальности «Хирургия»</li>
+                                                    <li>2010г. Переподготовка на базе БелМАПО по специальности «Проктология»</li>
+                                                </ul>
+                                            </p>
+                                            <h3>Повышение квалификации</h3>
+                                            <p>
+                                                <ul>
+                                                    <li>2005г. «Колопроктология и абдоминальная хирургия»</li>
+                                                    <li>2005г. «Лапароскопическая холецистэктомия»</li>
+                                                    <li>2014г. «Лазерная хирургия»</li>
+                                                    <li>2014г. «Особенности управления, экономики и финансирования здравоохранения в современных условиях»</li>
+                                                    <li>2019г. «Амбулаторная и малоинвазивная проктология»</li>
+                                                    <li>2021г. «Актуальные вопросы оказания неотложной медицинской помощи на амбулаторном этапе»</li>
+                                                </ul>
+                                            </p>
+            
+                                                 
+                                        </div>
+                                </div>
+                                </div>
+            
+                                <div class="swiper-slide">
+                                    <div class="slider__inner">
+                                       
+                                    <a href="anslysis.html">
+                                        <div class="slide">
+                                            <div class="slide__item-services">
+                                                <div class="slide__item-servicesHeader">
+                                                    <p>Анализы</p>
+                                                    <svg width="20" height="10" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
+                                                        <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="anslysis.html">
+                                        <div class="slide">
+                                            <div class="slide__item-services">
+                                                <div class="slide__item-servicesHeader">
+                                                    <p>Услуга 2</p>
+                                                    <svg width="20" height="10" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
+                                                        <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                        
+                                                </div>      
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="anslysis.html">
+                                        <div class="slide">
+                                            <div class="slide__item-services">
+                                                <div class="slide__item-servicesHeader">
+                                                    <p>Услуга 3</p>
+                                                    <svg width="20" height="10" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
+                                                        <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                        
+                                                </div>                    
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="anslysis.html">
+                                        <div class="slide">
+                                            <div class="slide__item-services">
+                                                <div class="slide__item-servicesHeader">
+                                                    <p>Услуга 4</p>
+                                                    <svg width="20" height="10" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
+                                                        <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    </div>
+                                </div>
+            
+                                <div class="swiper-slide">
+                                    <div class="slider__inner">
+                                        Сертификаты
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slider__inner">
+                                        Отзывы
+                                    </div>
+                                </div>
                             </div>
-                            <a href="anslysis.html">
-                                <div class="slide category2">
-                                    <div class="slide__item-services">
-                                        <div class="slide__item-servicesHeader">
-                                            <p>Анализы</p>
-                                            <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
-                                                <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                                
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="anslysis.html">
-                                <div class="slide category2">
-                                    <div class="slide__item-services">
-                                        <div class="slide__item-servicesHeader">
-                                            <p>Услуга 2</p>
-                                            <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
-                                                <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                                
-                                        </div>      
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="anslysis.html">
-                                <div class="slide category2">
-                                    <div class="slide__item-services">
-                                        <div class="slide__item-servicesHeader">
-                                            <p>Услуга 3</p>
-                                            <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
-                                                <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                                
-                                        </div>                    
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="anslysis.html">
-                                <div class="slide category2">
-                                    <div class="slide__item-services">
-                                        <div class="slide__item-servicesHeader">
-                                            <p>Услуга 4</p>
-                                            <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(90deg)">
-                                                <path d="M1 5L6 1L11 5" stroke="#456CEE" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                                
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="slide category3">Сертификаты</div>
-                            <div class="slide category4">Отзывы</div>
-                          </div>
-                    </div>
+                        </div>      
                 </div>
 
 

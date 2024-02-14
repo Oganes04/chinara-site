@@ -16,11 +16,22 @@ var swiper = new Swiper(".mainSwiper", {
 });
 
 var swiperStocks = new Swiper(".stocksSwiper", {
+  loop: true,
   spaceBetween: 30,
-  centeredSlides: true,
   autoplay: {
     delay: 10000,
     disableOnInteraction: false,
+  },
+  grabCursor: true,
+  effect: "creative",
+  creativeEffect: {
+    prev: {
+      shadow: true,
+      translate: ["-20%", 0, -1],
+    },
+    next: {
+      translate: ["100%", 0, 0],
+    },
   },
   pagination: {
     el: ".stocksSwiper__swiper-pagination",
@@ -33,7 +44,7 @@ var swiperStocks = new Swiper(".stocksSwiper", {
 });
 
 
-var swiper = new Swiper(".gallerySwiper", {
+var gallerySwiper = new Swiper(".gallerySwiper", {
   slidesPerView: "auto",
  
   spaceBetween: 30,
@@ -48,49 +59,45 @@ var swiper = new Swiper(".gallerySwiper", {
   },
 });
 
-// var mql = window.matchMedia("(max-width: 1200px)");
-// var mql2 = window.matchMedia("(max-width: 1050px)");
-// var mql3 = window.matchMedia("(max-width: 740px)");
-// var mql4 = window.matchMedia("(max-width: 540px)");
-// mql.addListener(function(e) {
-//     if (e.matches) {
-//         var slides = document.querySelectorAll('.slide__inner');
-//         slides.forEach(function(slide) {
-//             slide.style.backgroundRepeat = 'no-repeat';
-//             slide.style.backgroundPosition = '-200px center';
-//             slide.style.borderRadius = '45px 45px 0 0';
-//         });
-//     } else {
-//         // Сбросить стили здесь
-//     }
-// });
 
-// mql2.addListener(function(e) {
-//   if (e.matches) {
-//       var slide = document.querySelector('.slide__inner');
-//       slide.style.backgroundPosition = '-350px center';
-//   } else {
-//       // Сбросить стили здесь
-//   }
-// });
 
-// mql3.addListener(function(e) {
-//   if (e.matches) {
-//       var slide = document.querySelector('.slide__inner');
-//       slide.style.backgroundPosition = '-500px center';
-//   } else {
-//       // Сбросить стили здесь
-//   }
-// });
 
-// mql4.addListener(function(e) {
-//   if (e.matches) {
-//       var slide = document.querySelector('.slide__inner');
-//       slide.style.backgroundPosition = '-750px center';
-//   } else {
-//       // Сбросить стили здесь
-//   }
-// });
+
+
+var menuSwiper = new Swiper(".menuSwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: false,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".mainSwiper__button-next",
+    prevEl: ".mainSwiper__button-prev",
+  },
+});
+
+
+
+
+
+var categorySlides = {
+  'category1':  0,
+  'category2':  1,
+  'category3':  2
+};
+
+function changeCategory(category) {
+
+  var slideIndex = categorySlides[category] ||  0; 
+ 
+  menuSwiper.slideTo(slideIndex);
+}
+
+
+
+
 
 $("#burger_menu2").click(function() {
   $(this).toggleClass('open');
@@ -162,21 +169,19 @@ $(".dropdown__link").click(function(event) {
 
 
 
+// function changeCategory(category) {
+  
+//   $('.slide').each(function() {
+//     if ($(this).hasClass(category)) {
+//       $(this).addClass('active');
+//     } else {
+//       $(this).removeClass('active');
+//     }
+//   });
+// }
 
 
-
-function changeCategory(category) {
-  $('.slide').each(function() {
-    if ($(this).hasClass(category)) {
-      $(this).addClass('active');
-    } else {
-      $(this).removeClass('active');
-    }
-  });
-}
-
-
-changeCategory('category1');
+// changeCategory('category1');
 
 
 $('.slide').click(function() {
@@ -206,6 +211,12 @@ $('.direction__about-slider-category button').click(function() {
 
 });
 
+
+
+
+
+
+
 $('#radio__doctor').click(function() {
     $('#doctorSelector').show();
 
@@ -219,43 +230,36 @@ $('#radio__clinic').click(function() {
 
 
 
-// $('#prices__menu-item-1').click(function() {
-//   $('#price-list-1').show();
-// }).not(this).each(function() {
-//   $('#price-list-1').hide(); 
-// });
-
-
-// $('#prices__menu-item-2').click(function() {
-//   $('#price-list-2').show();
-// }).not(this).each(function() {
-//   $('#price-list-2').hide(); 
-// });
-
-
-// $('#prices__menu-item-3').click(function() {
-//   $('#price-list-3').show();
-// }).not(this).each(function() {
-//   $('#price-list-3').hide(); 
-// });
-
-// $('#prices__menu-item-2').click(function() {
-//   $('#price-list-4').show();
-// }).not(this).each(function() {
-//   $('#price-list-4').hide(); 
-// });
 
 
 // Общие классы для пункта меню и прайс-листа
 const menuItemsSelector = '.prices__menu-item';
 const priceListsSelector = '.prices__block-price__list';
 
-// Переменная для хранения текущего активного пункта меню
-// Переменная для хранения текущего активного пункта меню
+
 let activeMenuItem = null;
+
+$(document).ready(function() {
+  // Получаем первый пункт меню
+  const firstMenuItem = $(menuItemsSelector).first();
+
+  // Получаем  номер прайс-листа из ID первого пункта меню
+  const listNumber = firstMenuItem.attr('id').split('-').pop();
+
+  // Показываем соответствующий прайс-лист
+  $('#price-list-' + listNumber).show();
+
+  // Добавляем класс 'rotate' к SVG элементу первого пункта меню
+  firstMenuItem.find('svg').addClass('rotate');
+  firstMenuItem.css('box-shadow', '0px   0px   37px   8px rgba(0,0,0,0.1),0px   10px   15px -3px rgba(0,0,0,0.1)');
+
+  // Обновляем активный пункт меню
+  activeMenuItem = firstMenuItem;
+});
 
 // Обработчик клика по пунктам меню
 $(document).on('click', menuItemsSelector, function() {
+  
   // Скрываем все прайс-листы
   $(priceListsSelector).hide();
 
@@ -283,3 +287,36 @@ $(document).on('click', menuItemsSelector, function() {
 
 
 
+$(document).ready(function() {
+  // Выбор слоя параллакса
+  var $parallaxLayer = $('.parallax__layer');
+
+  // Прикрепление обработчика событий mousemove к слою параллакса
+  $parallaxLayer.on('mousemove', function(e) {
+    // Вычисление расстояния от центра слоя
+    var centerX = $(this).width() /  2;
+    var centerY = $(this).height() /  2;
+    var offsetX = e.pageX - $(this).offset().left - centerX;
+    var offsetY = e.pageY - $(this).offset().top - centerY;
+
+    // Применение вращения на основе позиции мыши
+    var rotationX = offsetY / centerY *  20; // Настройка множителя для желаемой интенсивности эффекта
+    var rotationY = -offsetX / centerX *  10; // Настройка множителя для желаемой интенсивности эффекта
+
+    // Добавляем небольшое горизонтальное смещение
+    var translateX = offsetX /  30;
+    var translateY = offsetY /  30;
+
+    // Применяем вращение и смещение ко всем дочерним изображениям
+    $(this).find('.parallaxElement').each(function() {
+      $(this).css({
+        'transform': 'rotate(' + rotationX + 'deg) rotateY(' + rotationY + 'deg) translate(' + translateX + 'px,' + translateY + 'px)'
+      });
+    });
+  }).on('mouseleave', function() {
+    // Возвращаем вращение к исходному состоянию при уходе мыши
+    $(this).find('.parallaxElement').css({
+      'transform': ''
+    });
+  });
+});

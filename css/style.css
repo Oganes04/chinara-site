@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* Reset and base styles  */
 
 * {
@@ -1055,7 +1057,7 @@ button.swiper-pagination-bullet {
   width: 261px;
   position: absolute;
   top: 30px;
-  left: -40px;
+  left: -20px;
   z-index: 100;
   background-color: #FFFFFF;
   border-radius: 15px;
@@ -1204,6 +1206,8 @@ button.swiper-pagination-bullet {
 }
 
 .consultation__header {
+  position: relative;
+  z-index: 100;
   max-width: 765px;
   text-transform: uppercase;
   margin-bottom: 25px;
@@ -1223,6 +1227,8 @@ button.swiper-pagination-bullet {
 }
 
 .consultation__form-section .consultation__form {
+  position: relative;
+  z-index: 100;
   padding: 30px;
   background-color: #FFFFFF;
   border-radius: 15px;
@@ -1279,6 +1285,51 @@ button.swiper-pagination-bullet {
 
 .consultation__form-section .consultation__form .consents .form__button {
   padding: 20px 40px;
+}
+
+.consultation {
+  background-color: #BFE4F1;
+  border-radius: 45px;
+}
+
+.parallax__layer {
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax__layer .gene1 {
+  position: absolute;
+  bottom: 0;
+  left: 1.38vw;
+}
+
+.parallax__layer .gene2 {
+  position: absolute;
+  bottom: 0.69vw;
+  left: 20.8vw;
+}
+
+.parallax__layer .gene3 {
+  position: absolute;
+  top: 1.38vw;
+  right: 22.9vw;
+}
+
+.parallax__layer .gene4 {
+  position: absolute;
+  top: 0px;
+  right: 69.4vw;
+}
+
+.parallax__layer .gene5 {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.parallaxElement {
+  perspective: 1000px;
+  transition: transform 0.3s ease-out;
 }
 
 .contacts {
@@ -1339,12 +1390,12 @@ button.swiper-pagination-bullet {
 }
 
 .contacts__inner .contacts__map {
-  border-radius: 45px;
-  border: 1px solid #456CEE;
   flex: 48%;
 }
 
 .contacts__inner .contacts__map .contacts__map-map iframe {
+  border-radius: 45px;
+  border: 1px solid #456CEE;
   width: 100%;
   height: 500px;
 }
@@ -1514,9 +1565,10 @@ button.swiper-pagination-bullet {
 
 .mainSwiper .swiper-pagination-bullet {
   background-color: transparent;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #fff;
   width: 10px;
   height: 10px;
+  opacity: 1;
 }
 
 .mainSwiper .swiper-pagination-bullet-active {
@@ -1576,6 +1628,23 @@ button.swiper-pagination-bullet {
   font-family: Gilroy-Regular;
   font-size: clamp(16px, 1.38vw, 20px);
   color: #456CEE;
+  transition: all 2.3s ease;
+  position: relative;
+}
+
+.directions__header a::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #456CEE;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.directions__header a:hover::after {
+  opacity: 1;
 }
 
 .directions__list {
@@ -1715,6 +1784,7 @@ button.swiper-pagination-bullet {
 
 .stocksSwiper {
   margin-bottom: 30px;
+  border-radius: 45px;
 }
 
 .stocksSwiper .stocksSwiper__img img {
@@ -1832,7 +1902,7 @@ button.swiper-pagination-bullet {
   width: 261px;
   position: absolute;
   top: 30px;
-  left: -40px;
+  left: -20px;
   z-index: 100;
   background-color: #FFFFFF;
   border-radius: 15px;
@@ -2121,6 +2191,7 @@ button.swiper-pagination-bullet {
 .direction__items a {
   max-width: 610px;
   flex: clamp(42.3vw, 42.3vw, 610px);
+  flex: 610px;
 }
 
 .direction__items a .direction__item {
@@ -2218,7 +2289,7 @@ button.swiper-pagination-bullet {
   gap: 40px;
   padding-bottom: 12px;
   border-bottom: 1px solid #82898B;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .direction__about-slider .direction__about-slider-category button {
@@ -2239,58 +2310,53 @@ button.swiper-pagination-bullet {
 }
 
 .direction__about-slider .slider {
-  width: 100%;
-  overflow: hidden;
+  padding-top: 10px;
 }
 
-.direction__about-slider .slider .slide {
-  display: none;
-  width: 100%;
+.direction__about-slider .slide {
+  margin: 0 auto;
+  width: 99%;
   color: #505759;
 }
 
-.direction__about-slider .slider .slide .slide__item-services .slide__item-servicesHeader svg path {
+.direction__about-slider .slide .slide__item-services .slide__item-servicesHeader svg path {
   transition: all 0.3s ease;
 }
 
-.direction__about-slider .slider .slide:hover .slide__item-services .slide__item-servicesHeader svg path {
+.direction__about-slider .slide:hover .slide__item-services .slide__item-servicesHeader svg path {
   stroke: #274ED0;
 }
 
-.direction__about-slider .slider .active {
-  display: block;
-}
-
-.direction__about-slider .slider .slide__item-services {
+.direction__about-slider .slide__item-services {
   padding: 30px;
   font-family: Gilroy-Semibold;
   font-size: clamp(18px, 1.66vw, 24px);
   border-radius: 15px;
   border: 1px solid #82898B;
   margin-bottom: 20px;
+  transition: box-shadow 0.4s ease;
+}
+
+.direction__about-slider .slide__item-services .slide__item-servicesHeader svg {
   transition: all 0.3s ease;
 }
 
-.direction__about-slider .slider .slide__item-services .slide__item-servicesHeader svg {
-  transition: all 0.3s ease;
+.direction__about-slider .slide__item-services:hover {
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.direction__about-slider .slider .slide__item-services:hover {
-  box-shadow: 0px 0px 37px 8px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-.direction__about-slider .slider .slide__item-services .slide__item-servicesHeader {
+.direction__about-slider .slide__item-services .slide__item-servicesHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.direction__about-slider .slider .slide__item-services .slide__item-servicesPrice {
+.direction__about-slider .slide__item-services .slide__item-servicesPrice {
   margin-top: 20px;
   display: none;
 }
 
-.direction__about-slider .slider .slide__item-services .slide__item-servicesPrice div {
+.direction__about-slider .slide__item-services .slide__item-servicesPrice div {
   font-size: clamp(16px, 1.38vw, 20px);
   font-family: Gilroy-Regular;
   display: flex;
@@ -2300,8 +2366,12 @@ button.swiper-pagination-bullet {
   letter-spacing: 2%;
 }
 
-.direction__about-slider .slider .slide__item-services .slide__item-servicesPrice div span {
+.direction__about-slider .slide__item-services .slide__item-servicesPrice div span {
   font-size: clamp(18px, 1.66vw, 24px);
+}
+
+.slider__inner {
+  background-color: #fff;
 }
 
 .rotate {
@@ -2326,6 +2396,11 @@ button.swiper-pagination-bullet {
   padding: 10px 20px 30px;
   border-radius: 15px;
   border: 1px solid #82898B;
+  transition: box-shadow 0.4s ease;
+}
+
+.doctors__items .doctors__item:hover {
+  box-shadow: 0px 0px 30px 8px rgba(0, 0, 0, 0.1), 0px 10px 10px -3px rgba(0, 0, 0, 0.1);
 }
 
 .doctors__items .doctors__item .doctors__item-img {
@@ -2358,7 +2433,23 @@ button.swiper-pagination-bullet {
 }
 
 .doctors__items .doctors__item .doctors__item-button .doctors__item-more a {
+  position: relative;
   color: #456CEE;
+}
+
+.doctors__items .doctors__item .doctors__item-button .doctors__item-more a::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #456CEE;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.doctors__items .doctors__item .doctors__item-button .doctors__item-more a:hover::after {
+  opacity: 1;
 }
 
 .doctors__inner {
@@ -2432,6 +2523,10 @@ button.swiper-pagination-bullet {
   margin-left: 1em;
 }
 
+.slider__inner {
+  padding-top: 5px;
+}
+
 .public__inner {
   margin-bottom: 200px;
 }
@@ -2453,6 +2548,11 @@ button.swiper-pagination-bullet {
   padding: 20px;
   border-radius: 15px;
   border: 1px solid #82898B;
+  transition: box-shadow 0.4s ease;
+}
+
+.public__inner .public__items .public__item:hover {
+  box-shadow: 0px 0px 30px 8px rgba(0, 0, 0, 0.1), 0px 10px 10px -3px rgba(0, 0, 0, 0.1);
 }
 
 .public__inner .public__items .public__item .public__item-info .public__item-category {
@@ -2665,13 +2765,20 @@ button.swiper-pagination-bullet {
   font-family: Gilroy-Medium;
   font-size: clamp(14px, 1.25vw, 18px);
   color: #505759;
+  display: flex;
+  align-items: center;
 }
 
 .reviews__inner .reviews__form .reviews__form-selection .reviews__form-selection-item input {
   margin-right: 10px;
+  width: 20px;
+  height: 20px;
 }
 
 .reviews__inner .reviews__form .reviews__form-selector__doctor {
+  font-family: Gilroy-Regular;
+  font-size: clamp(14px, 1.25vw, 18px);
+  color: #505759;
   padding: 20px;
   border-radius: 15px;
   border: 1px solid #82898B;
@@ -2681,6 +2788,9 @@ button.swiper-pagination-bullet {
 }
 
 .reviews__inner .reviews__form .reviews__form-selector__doctor .reviews__form-select__doctor {
+  font-family: Gilroy-Regular;
+  font-size: clamp(14px, 1.25vw, 18px);
+  color: #505759;
   width: 100%;
   -webkit-appearance: none;
   -webkit-appearance: none;
@@ -2738,6 +2848,145 @@ button.swiper-pagination-bullet {
 .reviews__inner .reviews__form .reviews__form-button {
   text-align: center;
   margin-top: 50px;
+}
+
+.custom-checkbox {
+  display: none;
+}
+
+.custom-checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.custom-checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #82898B;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.custom-checkbox:checked + label::before {
+  border-color: #456CEE;
+  background-color: #456CEE;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='white' d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093l3.473-4.425z'/%3E%3C/svg%3E");
+  background-size: 16px;
+}
+
+/* стили при наведении курсора на checkbox */
+
+.custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #b3d7ff;
+}
+
+/* стили для активного состояния чекбокса (при нажатии на него) */
+
+.custom-checkbox:not(:disabled):active + label::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+
+/* стили для чекбокса, находящегося в фокусе */
+
+.custom-checkbox:focus + label::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+
+.custom-checkbox:focus:not(:checked) + label::before {
+  border-color: #80bdff;
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+
+.custom-checkbox:disabled + label::before {
+  background-color: #e9ecef;
+}
+
+/* для элемента input c type="radio" */
+
+.custom-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* для элемента label связанного с .custom-radio */
+
+.custom-radio + label {
+  display: inline-flex;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+/* создание в label псевдоэлемента  before со следующими стилями */
+
+.custom-radio + label::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+/* стили при наведении курсора на радио */
+
+.custom-radio:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #b3d7ff;
+}
+
+/* стили для активной радиокнопки (при нажатии на неё) */
+
+.custom-radio:not(:disabled):active + label::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+
+/* стили для радиокнопки, находящейся в фокусе */
+
+.custom-radio:focus + label::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+
+.custom-radio:focus:not(:checked) + label::before {
+  border-color: #80bdff;
+}
+
+/* стили для радиокнопки, находящейся в состоянии checked */
+
+.custom-radio:checked + label::before {
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+/* стили для радиокнопки, находящейся в состоянии disabled */
+
+.custom-radio:disabled + label::before {
+  background-color: #e9ecef;
 }
 
 .page__menu-inner {
@@ -3100,7 +3349,7 @@ button.swiper-pagination-bullet {
 }
 
 .prices__block-menu .prices__menu-item:hover {
-  box-shadow: 0px 0px 37px 8px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 30px 8px rgba(0, 0, 0, 0.1), 0px 10px 10px -3px rgba(0, 0, 0, 0.1);
 }
 
 .prices__block {
@@ -3209,7 +3458,6 @@ button.swiper-pagination-bullet {
 
 .legal__information .slider {
   width: 100%;
-  overflow: hidden;
   margin-bottom: 30px;
 }
 
@@ -3253,7 +3501,7 @@ button.swiper-pagination-bullet {
 }
 
 .legal__information .slider .slide__item-services:hover {
-  box-shadow: 0px 0px 37px 8px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 30px 8px rgba(0, 0, 0, 0.1), 0px 10px 10px -3px rgba(0, 0, 0, 0.1);
 }
 
 .legal__information .slider .slide__item-services .slide__item-servicesHeader {
@@ -3340,8 +3588,6 @@ html {
 }
 
 body {
-  max-width: 1440px;
-  margin: 0 auto;
   color: #505759;
 }
 
@@ -3395,6 +3641,8 @@ footer {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
+  font-family: Gilroy-Light;
+  font-size: clamp(12px, 1.11vw, 16px);
 }
 
 .search__inner .search__select {
@@ -3428,7 +3676,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .search__inner .search__input input {
@@ -3436,7 +3684,6 @@ footer {
   padding: 20px;
   border-radius: 15px;
   border: 1px solid #82898B;
-  margin-right: 20px;
 }
 
 .search__inner .search__btn {
@@ -3449,6 +3696,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -3503,6 +3751,11 @@ footer {
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
+  }
+
+  .search__inner .search__select {
+    margin-right: 0;
+    width: 100%;
   }
 
   .search__inner .search__input {
@@ -3616,6 +3869,25 @@ footer {
 
   .prices__block .prices__block-price__list .price__list-procedures .procedures__items .procedures__item p {
     max-width: 425px;
+  }
+
+  .prices__block-menu {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    padding: 10px;
+  }
+
+  .prices__block-menu .prices__menu-item {
+    width: 500px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .prices__block-menu .prices__menu-item svg {
+    max-width: none;
   }
 
   .legal__information .slider .slide__item-services .slide__item-servicesHeader p {
@@ -3735,6 +4007,14 @@ footer {
 
   .naming .builded {
     margin-left: auto;
+  }
+
+  .direction__about-slider-category {
+    gap: 20px !important;
+  }
+
+  .direction__about-slider-category button {
+    font-size: 16px !important;
   }
 
   .direction__about-inner {
@@ -3899,6 +4179,10 @@ footer {
     font-size: 16px !important;
   }
 
+  .direction__about-slider .slide__item-services {
+    margin-bottom: 10px;
+  }
+
   .direction__about-slider {
     margin-bottom: 100px;
   }
@@ -3945,6 +4229,19 @@ footer {
     align-items: flex-start;
   }
 
+  .reviews__inner .reviews__form .reviews__form-button .button {
+    width: 100%;
+  }
+
+  .gallery .gallery__inner .gallerySwiper .swiper-wrapper .swiper-slide {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .gallery .gallery__inner .gallerySwiper .swiper-wrapper .swiper-slide img {
+    margin: 0 auto;
+  }
+
   .documents .documents__inner .licenses__items {
     display: flex;
     flex-direction: column;
@@ -3972,6 +4269,10 @@ footer {
 
   .documents .documents__inner .licenses__items .licenses__item .licenses__item-description .licenses__item-button button {
     margin: 0 auto;
+  }
+
+  .vacancy .vacancy__inner .vacancy__items .vacancy__item {
+    flex: 100%;
   }
 
   .vacancy .vacancy__inner .vacancy__items .vacancy__item .vacancy__item-info {
@@ -4016,14 +4317,6 @@ footer {
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
-  }
-
-  .search__inner .search__input .search__btn button {
-    padding: 10px;
-  }
-
-  .search__inner .search__input .search__btn button span {
-    display: none;
   }
 }
 
@@ -4100,6 +4393,13 @@ footer {
   .policy {
     flex-direction: column;
     gap: 10px;
+  }
+}
+
+@media only screen and (max-width: 446px) {
+  .reviews__inner .reviews__list .reviews__items .reviews__item .reviews__item-category {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
