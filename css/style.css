@@ -1235,6 +1235,9 @@ button.swiper-pagination-bullet {
 }
 
 .consultation__form-section .consultation__form .inputs {
+  font-family: Gilroy-Light;
+  font-size: clamp(12px, 1.11vw, 16px);
+  color: #82898B;
   display: flex;
   justify-content: space-between;
   align-items: center;
