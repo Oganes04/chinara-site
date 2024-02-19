@@ -107,16 +107,38 @@ $("#burger_menu2").click(function() {
 
 
 
-$(".dropdown__link").click(function(event) {
+
+
+
+ $(".dropdown__link-selector").click(function(event) {
+  event.stopPropagation(); // Предотвращает закрытие выпадающего списка при клике на ссылку
+  $(".dropdown__content-selector").slideToggle("fast");
+  $('.dropdown__link-selector  img').toggleClass("rotate_row");
+ });
+ 
+ $(document).click(function() {
+  $(".dropdown__content-selector").slideUp("fast"); // Закрывает выпадающий список при клике вне его области
+ 
+ });
+
+ $(".dropdown__link").click(function(event) {
   event.stopPropagation(); // Предотвращает закрытие выпадающего списка при клике на ссылку
   $(".dropdown__content").slideToggle("fast");
+  $('.dropdown__link  img').toggleClass("rotate_row");
  });
  
  $(document).click(function() {
   $(".dropdown__content").slideUp("fast"); // Закрывает выпадающий список при клике вне его области
+ 
  });
 
-
+ $('.dropdown__content-selector p').click(function() {
+  // Get the text of the clicked p element
+  var selectedText = $(this).text();
+  
+  // Set the text of the dropdown__link-selector to the text of the clicked p element
+  $('.selected__direction').text(selectedText);
+});
 
 
 
@@ -169,19 +191,6 @@ $(".dropdown__link").click(function(event) {
 
 
 
-// function changeCategory(category) {
-  
-//   $('.slide').each(function() {
-//     if ($(this).hasClass(category)) {
-//       $(this).addClass('active');
-//     } else {
-//       $(this).removeClass('active');
-//     }
-//   });
-// }
-
-
-// changeCategory('category1');
 
 
 $('.slide').click(function() {
@@ -219,6 +228,7 @@ $('.direction__about-slider-category button').click(function() {
 
 $('#radio__doctor').click(function() {
     $('#doctorSelector').show();
+   
 
 });
 
@@ -319,4 +329,15 @@ $(document).ready(function() {
       'transform': ''
     });
   });
+});
+
+
+$('.doctors__item').click(function() {
+  window.location.replace('/doctor.html')
+
+});
+
+$('.public__item').click(function() {
+  window.location.replace('/public.html')
+
 });

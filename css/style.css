@@ -1017,7 +1017,7 @@ button.swiper-pagination-bullet {
 .nav {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
 }
 
 .nav__link {
@@ -1027,6 +1027,7 @@ button.swiper-pagination-bullet {
   color: #505759;
   line-height: 21.6px;
   letter-spacing: 2%;
+  white-space: nowrap;
   background: no-repeat 0 100%;
   background-image: linear-gradient(#456CEE, #456CEE);
   background-size: 0% 1px;
@@ -1045,12 +1046,17 @@ button.swiper-pagination-bullet {
   gap: 5px;
 }
 
-.dropdown__link img {
-  transform: rotate(180deg);
-}
-
 .dropdown__link:hover {
   cursor: pointer;
+}
+
+.dropdown__link img {
+  transition: transform 0.4s ease-in-out;
+}
+
+.rotate_row {
+  transform: rotate(-180deg);
+  transition: transform 0.3s ease-in-out;
 }
 
 .dropdown__content {
@@ -1865,7 +1871,7 @@ button.swiper-pagination-bullet {
 .nav {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
 }
 
 .nav__link {
@@ -1875,6 +1881,7 @@ button.swiper-pagination-bullet {
   color: #505759;
   line-height: 21.6px;
   letter-spacing: 2%;
+  white-space: nowrap;
   background: no-repeat 0 100%;
   background-image: linear-gradient(#456CEE, #456CEE);
   background-size: 0% 1px;
@@ -1893,12 +1900,17 @@ button.swiper-pagination-bullet {
   gap: 5px;
 }
 
-.dropdown__link img {
-  transform: rotate(180deg);
-}
-
 .dropdown__link:hover {
   cursor: pointer;
+}
+
+.dropdown__link img {
+  transition: transform 0.4s ease-in-out;
+}
+
+.rotate_row {
+  transform: rotate(-180deg);
+  transition: transform 0.3s ease-in-out;
 }
 
 .dropdown__content {
@@ -2193,8 +2205,7 @@ button.swiper-pagination-bullet {
 
 .direction__items a {
   max-width: 610px;
-  flex: clamp(42.3vw, 42.3vw, 610px);
-  flex: 610px;
+  flex: clamp(42.3vw, 550px, 610px);
 }
 
 .direction__items a .direction__item {
@@ -2227,6 +2238,79 @@ button.swiper-pagination-bullet {
 
 .direction__items a .direction__item:hover {
   box-shadow: 0px 0px 37px 8px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.selector {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.selector__link {
+  font-family: "Gilroy-Regular";
+  font-weight: normal;
+  font-size: clamp(14px, 1.25vw, 18px);
+  color: #505759;
+  line-height: 21.6px;
+  letter-spacing: 2%;
+  white-space: nowrap;
+  transition: background-size 0.3s ease;
+}
+
+.dropdown__link-selector {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.dropdown__link-selector:hover {
+  cursor: pointer;
+}
+
+.dropdown__link-selector img {
+  transition: transform 0.4s ease-in-out;
+}
+
+.rotate_row {
+  transform: rotate(-180deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropdown__content-selector {
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  left: -20px;
+  z-index: 100;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  display: none;
+}
+
+.dropdown__content-selector p:first-child {
+  border-radius: 15px 15px 0 0;
+}
+
+.dropdown__content-selector p:last-child {
+  border-radius: 0 0 15px 15px;
+}
+
+.dropdown__content-selector p {
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  font-family: "Gilroy-Regular";
+  font-weight: normal;
+  font-size: 16px;
+  color: #505759;
+  transition: all 0.4s ease;
+}
+
+.dropdown__content-selector p:hover {
+  background-color: #BFE4F1;
 }
 
 .direction__about-inner {
@@ -2414,6 +2498,7 @@ button.swiper-pagination-bullet {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  color: #82898B;
   margin-bottom: 30px;
 }
 
@@ -2436,6 +2521,7 @@ button.swiper-pagination-bullet {
 }
 
 .doctors__items .doctors__item .doctors__item-button .doctors__item-more a {
+  text-decoration: none;
   position: relative;
   color: #456CEE;
 }
@@ -3696,8 +3782,24 @@ footer {
     gap: 15px;
   }
 
+  .header {
+    display: none;
+  }
+
+  .header__adaptive {
+    display: block;
+  }
+
   .nav {
     gap: 15px;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .header__adaptive {
+    display: block;
   }
 
   .doctor__inner .doctor__description .doctor__info [class^=doctor__info] {
@@ -3742,14 +3844,6 @@ footer {
 }
 
 @media only screen and (max-width: 992px) {
-  .header {
-    display: none;
-  }
-
-  .header__adaptive {
-    display: block;
-  }
-
   .consultation__form-section {
     flex-direction: column;
     gap: 20px;
@@ -3761,14 +3855,6 @@ footer {
 
   .directions__list a {
     flex: 100%;
-  }
-
-  .header {
-    display: none;
-  }
-
-  .header__adaptive {
-    display: block;
   }
 
   .direction__items a {
@@ -4308,6 +4394,7 @@ footer {
   }
 
   .footer__inner .footer__logo .scroll_button {
+    margin: 0 auto;
     margin-top: 20px;
   }
 
@@ -4345,6 +4432,7 @@ footer {
   }
 
   .footer__inner .footer__logo .scroll_button {
+    margin: 0 auto;
     margin-top: 20px;
   }
 

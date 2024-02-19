@@ -19,14 +19,14 @@
             <div class="header__inner">
                 <a href="/" class="header__logo"><img src="../../images/LOGO.svg" alt=""></a>   
                 <nav class="nav">
-                    <a href="directions.html" class="nav__link">Услуги</a>
+                    <a href="directions.html" class="nav__link">Направления</a>
                     <a href="doctors.html" class="nav__link">Врачи</a>
                     <a href="about_clinic.html" class="nav__link">О клинике</a>
                     <a href="public.html" class="nav__link">Публикации</a>
                     <div class="dropdown__link">
                         <div href="for_patients.html" class="nav__link dropdown__link">
                             Пациентам
-                            <img src="../../images/header__row.svg" alt="">      
+                            <img class="dropdown__row" src="../../images/dropdown__row.svg" alt="">      
                         </div>
                         <div class="dropdown__content" style="box-shadow: 0px 0px 17px 11px rgba(0,0,0,0.1);">
                             <a href="for_patients.html#why">Часто задаваемые вопросы</a>
@@ -62,7 +62,7 @@
                 </div>
             </div>
             <nav class="nav">
-                <a href="directions.html" class="nav__link">Услуги</a>
+                <a href="directions.html" class="nav__link">Направления</a>
                 <a href="doctors.html" class="nav__link">Врачи</a>
                 <a href="about_clinic.html" class="nav__link">О клинике</a>
                 <a href="public.html" class="nav__link">Публикации</a>
@@ -70,7 +70,7 @@
                 <div class="dropdown__link">
                     <div href="for_patients.html" class="nav__link dropdown__link">
                         Пациентам
-                        <img src="../../images/header__row.svg" alt="">      
+                        <img class="dropdown__row" src="../../images/dropdown__row.svg" alt="">      
                     </div>
                     <div class="dropdown__content" style="box-shadow: 0px 0px 17px 11px rgba(0,0,0,0.1);">
                         <a href="for_patients.html#why">Часто задаваемые вопросы</a>
@@ -111,11 +111,20 @@
         <div class="container">
             <div class="search__inner">
                 <div class="search__select">
-                    <select class="search__selector" id="" name="directionList">
-                        <option value="">Категория</option>
-                        <option value="name1">Гинекологи</option>
-                        <option value="name2">Неврология</option>
-                    </select>
+                    <div class="dropdown__link-selector">
+                        <div href="for_patients.html" class="selector__link dropdown__link-selector">
+                            <p class="selected__direction">Категория</p>
+                            <img class="dropdown__row" src="../../images/dropdown__row.svg" alt="">      
+                        </div>
+                        <div class="dropdown__content-selector" style="box-shadow: 0px 0px 17px 11px rgba(0,0,0,0.1);">
+                            <p>Гинеколокия</p>
+                            <p>Неврология</p>
+                            <p>Оториноларингология</p>
+                            <p>Офтальмология</p>
+                            <p>Стоматология</p>
+                            <p>Терапия</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="search__input">
