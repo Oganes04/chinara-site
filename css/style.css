@@ -4030,8 +4030,11 @@ footer {
     max-width: 360px;
   }
 
+  .stocksSwiper__img {
+    display: none;
+  }
+
   .stocksSwiper__inner {
-    height: auto;
     flex-direction: column-reverse;
     justify-content: flex-end;
   }
@@ -4039,10 +4042,12 @@ footer {
   .stocksSwiper__inner .stocksSwiper__info {
     width: 100%;
     padding: 20px;
+    height: 100%;
   }
 
   .stocksSwiper__inner .stocksSwiper__info .button {
-    position: static;
+    margin-top: auto;
+    margin-top: auto;
   }
 
   .directions,
