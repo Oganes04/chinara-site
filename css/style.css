@@ -998,6 +998,7 @@ button.swiper-pagination-bullet {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+  background-color: #FFF;
 }
 
 .header__button {
@@ -1124,6 +1125,12 @@ button.swiper-pagination-bullet {
   transform: translateY(0);
 }
 
+.header__burger-menu {
+  background-color: #456CEE;
+  padding: 18px;
+  border-radius: 15px;
+}
+
 #burger_menu2 {
   z-index: 100;
   width: 26px;
@@ -1139,7 +1146,7 @@ button.swiper-pagination-bullet {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: #456CEE;
+  background: #FFFFFF;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -1852,6 +1859,7 @@ button.swiper-pagination-bullet {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+  background-color: #FFF;
 }
 
 .header__button {
@@ -1978,6 +1986,12 @@ button.swiper-pagination-bullet {
   transform: translateY(0);
 }
 
+.header__burger-menu {
+  background-color: #456CEE;
+  padding: 18px;
+  border-radius: 15px;
+}
+
 #burger_menu2 {
   z-index: 100;
   width: 26px;
@@ -1993,7 +2007,7 @@ button.swiper-pagination-bullet {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: #456CEE;
+  background: #FFFFFF;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -4197,14 +4211,28 @@ footer {
     margin-left: auto;
   }
 
+  .directions__list a .directions__item .direction__header {
+    align-items: flex-start;
+  }
+
+  .directions__list a .directions__item {
+    position: relative;
+  }
+
+  .directions__list a .directions__item .service_count {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
   .directions__item {
-    flex-direction: column;
-    padding: 10px;
+    align-items: flex-start;
   }
 
   .directions__item .direction__header {
-    margin-right: auto;
-    gap: 5px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
   .directions__item .direction__header p {
