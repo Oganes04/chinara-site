@@ -1109,16 +1109,33 @@ button.swiper-pagination-bullet {
 
 .header__adaptive nav {
   width: 100%;
+  height: 100vh;
   flex-direction: column;
-  justify-content: center;
+  color: #505759;
   margin: 0 auto;
   position: absolute;
   left: 0;
   z-index: 100;
   background-color: #FFFFFF;
-  padding-bottom: 20px;
-  transform: translateY(-400px);
+  gap: 30px;
+  padding: 160px 20px 20px;
+  transform: translateY(-100vh);
   transition: transform 0.4s ease-in-out;
+}
+
+.header__adaptive nav .nav__link {
+  font-family: "Gilroy-Regular";
+  font-weight: normal;
+  font-size: 24px;
+}
+
+.header__adaptive nav .header__button {
+  padding-top: 20px;
+  width: 100%;
+}
+
+.header__adaptive nav .header__button button {
+  width: 100%;
 }
 
 .header__adaptive .nav.open {
@@ -1970,16 +1987,33 @@ button.swiper-pagination-bullet {
 
 .header__adaptive nav {
   width: 100%;
+  height: 100vh;
   flex-direction: column;
-  justify-content: center;
+  color: #505759;
   margin: 0 auto;
   position: absolute;
   left: 0;
   z-index: 100;
   background-color: #FFFFFF;
-  padding-bottom: 20px;
-  transform: translateY(-400px);
+  gap: 30px;
+  padding: 160px 20px 20px;
+  transform: translateY(-100vh);
   transition: transform 0.4s ease-in-out;
+}
+
+.header__adaptive nav .nav__link {
+  font-family: "Gilroy-Regular";
+  font-weight: normal;
+  font-size: 24px;
+}
+
+.header__adaptive nav .header__button {
+  padding-top: 20px;
+  width: 100%;
+}
+
+.header__adaptive nav .header__button button {
+  width: 100%;
 }
 
 .header__adaptive .nav.open {
@@ -4168,6 +4202,15 @@ footer {
 }
 
 @media only screen and (max-width: 576px) {
+  #header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #FFF;
+    border-radius: 0 0 15px 15px;
+  }
+
   .consultation {
     margin-bottom: 100px;
   }
@@ -4250,6 +4293,15 @@ footer {
 
   .stocksSwiper__inner .stocksSwiper__img {
     display: none;
+  }
+
+  #header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #FFF;
+    border-radius: 0 0 15px 15px;
   }
 
   .footer__inner .footer__logo p {
