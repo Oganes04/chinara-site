@@ -4405,6 +4405,7 @@ footer {
   .footer__inner .footer__contacts .footer__contacts-header {
     font-size: 24px;
     margin-bottom: 30px;
+    color: #505759;
   }
 
   .footer__inner .footer__navigation .navigation__items a {
@@ -4423,6 +4424,7 @@ footer {
 
   .footer__inner .footer__contacts .footer__contacts-time {
     margin-bottom: 0;
+    color: #505759;
   }
 
   .policy {
@@ -4576,6 +4578,7 @@ footer {
   .footer__inner .footer__contacts .footer__contacts-header {
     font-size: 24px;
     margin-bottom: 30px;
+    color: #505759;
   }
 
   .footer__inner .footer__navigation .navigation__items a {
@@ -4594,6 +4597,7 @@ footer {
 
   .footer__inner .footer__contacts .footer__contacts-time {
     margin-bottom: 0;
+    color: #505759;
   }
 
   .policy {
