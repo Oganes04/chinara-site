@@ -102,6 +102,7 @@ function changeCategory(category) {
 $("#burger_menu2").click(function() {
   $(this).toggleClass('open');
   $("nav").toggleClass("open");
+  $('#header').toggleClass("toggle__border-radius");
 });
 
 $('.header__slider').click(function() {
@@ -120,7 +121,10 @@ $('.header__slider').click(function() {
 });
 
 
-
+$('.header__slider-inner a').click(function() {
+  // Remove the 'open' class from the .nav element
+  $('.nav').removeClass('open');
+});
 
 $(document).click(function() {
         
