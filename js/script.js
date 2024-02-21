@@ -105,6 +105,36 @@ $("#burger_menu2").click(function() {
 });
 
 
+$('.header__slider').click(function() {
+  var $currentAnswer = $(this).find('.header__slider-inner');
+
+  $('.header__slider-header svg').removeClass('rotate');
+
+
+  
+  // Используйте slideToggle с событием start для установки display: flex;
+  $currentAnswer.slideToggle({
+    start: function() {
+      $(this).css('display', 'flex');
+    }
+  });
+
+  // Если слайдер открыт, добавляем класс rotate
+  if ($currentAnswer.is(':visible')) {
+    $(this).find('svg').addClass('rotate');
+  }
+});
+
+$(document).click(function() {
+        
+  if ($('.nav').hasClass('open')) {
+    $('html').css('overflow-y', 'hidden');
+  } else {
+    $('html').css('overflow-y', 'auto');
+  }
+      
+});
+
 
 
 
@@ -341,3 +371,8 @@ $('.public__item').click(function() {
   window.location.replace('/public.html')
 
 });
+
+
+
+
+

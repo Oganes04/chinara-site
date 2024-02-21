@@ -1118,7 +1118,8 @@ button.swiper-pagination-bullet {
   z-index: 100;
   background-color: #FFFFFF;
   gap: 30px;
-  padding: 160px 20px 20px;
+  padding: 0 20px;
+  justify-content: center;
   transform: translateY(-101vh);
   transition: transform 0.4s ease-in-out;
 }
@@ -1126,7 +1127,7 @@ button.swiper-pagination-bullet {
 .header__adaptive nav .nav__link {
   font-family: "Gilroy-Regular";
   font-weight: normal;
-  font-size: 24px;
+  font-size: clamp(18px, 1.66vw, 24px);
 }
 
 .header__adaptive nav .header__button {
@@ -1136,6 +1137,41 @@ button.swiper-pagination-bullet {
 
 .header__adaptive nav .header__button button {
   width: 100%;
+}
+
+.header__adaptive nav .header__slider {
+  position: relative;
+}
+
+.header__adaptive nav .header__slider-header {
+  font-family: "Gilroy-Regular";
+  font-weight: normal;
+  color: #505759;
+  font-size: clamp(18px, 1.66vw, 24px);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition: height 0.3s linear, padding-top 0.3s linear, padding-bottom 0.3s linear, border-top-width 0.3s linear, border-bottom-width 0.3s linear;
+}
+
+.header__adaptive nav .header__slider-inner {
+  overflow-y: scroll;
+  font-family: "Gilroy-Regular";
+  font-weight: normal;
+  font-size: clamp(14px, 1.25vw, 18px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0 0;
+  align-items: center;
+  display: none;
+}
+
+.header__adaptive nav .header__slider-inner a {
+  color: #82898B;
 }
 
 .header__adaptive .nav.open {
@@ -1208,7 +1244,7 @@ button.swiper-pagination-bullet {
   position: fixed;
   right: 26px;
   bottom: 50px;
-  z-index: 1000;
+  z-index: 99;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1258,7 +1294,7 @@ button.swiper-pagination-bullet {
 
 .consultation__form-section .consultation__form {
   position: relative;
-  z-index: 100;
+  z-index: 98;
   padding: 30px;
   background-color: #FFFFFF;
   border-radius: 15px;
@@ -1996,7 +2032,8 @@ button.swiper-pagination-bullet {
   z-index: 100;
   background-color: #FFFFFF;
   gap: 30px;
-  padding: 160px 20px 20px;
+  padding: 0 20px;
+  justify-content: center;
   transform: translateY(-101vh);
   transition: transform 0.4s ease-in-out;
 }
@@ -2004,7 +2041,7 @@ button.swiper-pagination-bullet {
 .header__adaptive nav .nav__link {
   font-family: "Gilroy-Regular";
   font-weight: normal;
-  font-size: 24px;
+  font-size: clamp(18px, 1.66vw, 24px);
 }
 
 .header__adaptive nav .header__button {
@@ -2014,6 +2051,41 @@ button.swiper-pagination-bullet {
 
 .header__adaptive nav .header__button button {
   width: 100%;
+}
+
+.header__adaptive nav .header__slider {
+  position: relative;
+}
+
+.header__adaptive nav .header__slider-header {
+  font-family: "Gilroy-Regular";
+  font-weight: normal;
+  color: #505759;
+  font-size: clamp(18px, 1.66vw, 24px);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition: height 0.3s linear, padding-top 0.3s linear, padding-bottom 0.3s linear, border-top-width 0.3s linear, border-bottom-width 0.3s linear;
+}
+
+.header__adaptive nav .header__slider-inner {
+  overflow-y: scroll;
+  font-family: "Gilroy-Regular";
+  font-weight: normal;
+  font-size: clamp(14px, 1.25vw, 18px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0 0;
+  align-items: center;
+  display: none;
+}
+
+.header__adaptive nav .header__slider-inner a {
+  color: #82898B;
 }
 
 .header__adaptive .nav.open {
@@ -2086,7 +2158,7 @@ button.swiper-pagination-bullet {
   position: fixed;
   right: 26px;
   bottom: 50px;
-  z-index: 1000;
+  z-index: 99;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4575,5 +4647,33 @@ footer {
   .doctor__inner .doctor__description .doctor__info p {
     width: 180px;
     font-size: 14px;
+  }
+}
+
+@media only screen and (max-height: 680px) {
+  .header__adaptive nav {
+    gap: 20px;
+    justify-content: flex-start;
+    padding-top: 30px;
+  }
+
+  .header__adaptive nav {
+    gap: 20px;
+    justify-content: flex-start;
+    padding-top: 30px;
+  }
+}
+
+@media only screen and (max-height: 620px) {
+  .header__adaptive .nav.open {
+    overflow-y: scroll;
+    transform: translateY(0);
+    padding-bottom: 200px;
+  }
+
+  .header__adaptive .nav.open {
+    overflow-y: scroll;
+    transform: translateY(0);
+    padding-bottom: 200px;
   }
 }
