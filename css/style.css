@@ -4093,6 +4093,10 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+  .consultation__header.section__header {
+    margin-bottom: 20px;
+  }
+
   .consultation {
     margin-bottom: 150px;
   }
@@ -4132,6 +4136,11 @@ footer {
 
   .parallax__layer .gene5 {
     display: none;
+  }
+
+  .consultation__form-section .consultation__form .consents .consent .consent__personal-data p a {
+    display: block;
+    width: 100%;
   }
 
   .contacts {
