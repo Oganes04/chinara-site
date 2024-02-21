@@ -4105,6 +4105,10 @@ footer {
     flex-direction: column;
   }
 
+  .consultation__form-section .consultation__form .inputs {
+    margin-bottom: 20px;
+  }
+
   .consultation__form-section .consultation__form .inputs input {
     width: 100%;
   }
@@ -4114,8 +4118,12 @@ footer {
     gap: 20px;
   }
 
+  .consultation__form-section .consultation__form .consents {
+    align-items: flex-start;
+  }
+
   .consultation__form {
-    margin: 0 auto;
+    width: 100%;
   }
 
   .parallax__layer .gene1 {
