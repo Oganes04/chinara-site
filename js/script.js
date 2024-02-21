@@ -104,26 +104,23 @@ $("#burger_menu2").click(function() {
   $("nav").toggleClass("open");
 });
 
-
 $('.header__slider').click(function() {
   var $currentAnswer = $(this).find('.header__slider-inner');
 
-  $('.header__slider-header svg').removeClass('rotate');
-
-
-  
-  // Используйте slideToggle с событием start для установки display: flex;
-  $currentAnswer.slideToggle({
-    start: function() {
-      $(this).css('display', 'flex');
-    }
-  });
-
-  // Если слайдер открыт, добавляем класс rotate
+  // Check if the current answer is visible
   if ($currentAnswer.is(':visible')) {
-    $(this).find('svg').addClass('rotate');
+    // If visible, slide up and remove the rotate_row class
+    $('.dropdown__row').removeClass('rotate_row');
+    $currentAnswer.slideUp();
+  } else {
+    // If not visible, add the rotate_row class and slide down
+    $('.dropdown__row').addClass('rotate_row');
+    $currentAnswer.slideDown();
   }
 });
+
+
+
 
 $(document).click(function() {
         

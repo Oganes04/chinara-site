@@ -1051,13 +1051,17 @@ button.swiper-pagination-bullet {
   cursor: pointer;
 }
 
+.dropdown__row {
+  transition: all 0.3s ease-in-out;
+}
+
 .dropdown__link img {
   transition: transform 0.4s ease-in-out;
 }
 
 .rotate_row {
   transform: rotate(-180deg);
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .dropdown__content {
@@ -1139,10 +1143,6 @@ button.swiper-pagination-bullet {
   width: 100%;
 }
 
-.header__adaptive nav .header__slider {
-  position: relative;
-}
-
 .header__adaptive nav .header__slider-header {
   font-family: "Gilroy-Regular";
   font-weight: normal;
@@ -1153,7 +1153,6 @@ button.swiper-pagination-bullet {
   justify-content: center;
   align-items: center;
   gap: 12px;
-  transition: height 0.3s linear, padding-top 0.3s linear, padding-bottom 0.3s linear, border-top-width 0.3s linear, border-bottom-width 0.3s linear;
 }
 
 .header__adaptive nav .header__slider-inner {
@@ -1161,16 +1160,15 @@ button.swiper-pagination-bullet {
   font-family: "Gilroy-Regular";
   font-weight: normal;
   font-size: clamp(14px, 1.25vw, 18px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
   padding: 20px 0 0;
-  align-items: center;
   display: none;
+  text-align: center;
 }
 
 .header__adaptive nav .header__slider-inner a {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
   color: #82898B;
 }
 
@@ -1965,13 +1963,17 @@ button.swiper-pagination-bullet {
   cursor: pointer;
 }
 
+.dropdown__row {
+  transition: all 0.3s ease-in-out;
+}
+
 .dropdown__link img {
   transition: transform 0.4s ease-in-out;
 }
 
 .rotate_row {
   transform: rotate(-180deg);
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .dropdown__content {
@@ -2053,10 +2055,6 @@ button.swiper-pagination-bullet {
   width: 100%;
 }
 
-.header__adaptive nav .header__slider {
-  position: relative;
-}
-
 .header__adaptive nav .header__slider-header {
   font-family: "Gilroy-Regular";
   font-weight: normal;
@@ -2067,7 +2065,6 @@ button.swiper-pagination-bullet {
   justify-content: center;
   align-items: center;
   gap: 12px;
-  transition: height 0.3s linear, padding-top 0.3s linear, padding-bottom 0.3s linear, border-top-width 0.3s linear, border-bottom-width 0.3s linear;
 }
 
 .header__adaptive nav .header__slider-inner {
@@ -2075,16 +2072,15 @@ button.swiper-pagination-bullet {
   font-family: "Gilroy-Regular";
   font-weight: normal;
   font-size: clamp(14px, 1.25vw, 18px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
   padding: 20px 0 0;
-  align-items: center;
   display: none;
+  text-align: center;
 }
 
 .header__adaptive nav .header__slider-inner a {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
   color: #82898B;
 }
 
