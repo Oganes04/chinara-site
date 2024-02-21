@@ -1653,7 +1653,7 @@ button.swiper-pagination-bullet {
   position: absolute;
   display: block;
   width: 100%;
-  bottom: 30px;
+  bottom: 20px;
   left: 0;
   z-index: 100;
 }
@@ -4101,13 +4101,37 @@ footer {
     flex-direction: column;
   }
 
+  .consultation__form-section .consultation__form .inputs input {
+    width: 100%;
+  }
+
   .consents {
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
   }
 
   .consultation__form {
     margin: 0 auto;
+  }
+
+  .parallax__layer .gene1 {
+    display: none;
+  }
+
+  .parallax__layer .gene2 {
+    display: none;
+  }
+
+  .parallax__layer .gene3 {
+    display: none;
+  }
+
+  .parallax__layer .gene4 {
+    display: none;
+  }
+
+  .parallax__layer .gene5 {
+    display: none;
   }
 
   .contacts {
@@ -4439,7 +4463,7 @@ footer {
     padding-right: 20px;
     position: absolute;
     right: 0px;
-    bottom: 42px;
+    bottom: 32px;
   }
 
   .stocksSwiper__inner .stocksSwiper__info .button {
@@ -4754,10 +4778,6 @@ footer {
 @media only screen and (max-width: 420px) {
   .consultation__form-section .consultation__form {
     padding: 20px;
-  }
-
-  .consultation__form-section .consultation__form .inputs input {
-    width: 250px;
   }
 
   .consultation__form-section .consultation__form .form__button {
