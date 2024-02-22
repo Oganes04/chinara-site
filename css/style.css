@@ -4945,6 +4945,16 @@ footer {
 }
 
 @media (orientation: landscape) and (max-height: 460px) {
+  #header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1201;
+    background-color: #FFF;
+    border-radius: 0 0 15px 15px;
+    transition: all 0.4s ease-in-out;
+  }
+
   .header__adaptive .nav.open {
     padding: 0;
     gap: 10px;
@@ -4954,6 +4964,16 @@ footer {
 
   .header__adaptive .nav {
     transform: translateY(-140vh);
+  }
+
+  #header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1201;
+    background-color: #FFF;
+    border-radius: 0 0 15px 15px;
+    transition: all 0.4s ease-in-out;
   }
 
   .header__adaptive .nav.open {
