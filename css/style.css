@@ -1958,6 +1958,7 @@ button.swiper-pagination-bullet {
 }
 
 .slider__animation {
+  display: none;
   position: relative;
   width: 56px;
   height: 70px;
@@ -4612,6 +4613,10 @@ footer {
     position: absolute;
     right: 0px;
     bottom: 32px;
+  }
+
+  .slider__animation {
+    display: block;
   }
 
   .stocksSwiper__inner .stocksSwiper__info .button {
