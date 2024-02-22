@@ -1302,9 +1302,10 @@ button.swiper-pagination-bullet {
   border-radius: 15px;
 }
 
-.consultation__form-section .consultation__form .inputs {
+.consultation__form-section .consultation__form .inputs,
+.consultation__form-section .consultation__form .inputs__wrapper {
   font-family: Gilroy-Light;
-  font-size: clamp(12px, 1.11vw, 16px);
+  font-size: 16px;
   color: #82898B;
   display: flex;
   justify-content: space-between;
@@ -1313,11 +1314,41 @@ button.swiper-pagination-bullet {
   margin-bottom: 40px;
 }
 
-.consultation__form-section .consultation__form .inputs input {
+.consultation__form-section .consultation__form .inputs .inputs__wrapper,
+.consultation__form-section .consultation__form .inputs__wrapper .inputs__wrapper {
+  margin: 0;
+  position: relative;
+}
+
+.consultation__form-section .consultation__form .inputs .inputs__wrapper::after,
+.consultation__form-section .consultation__form .inputs__wrapper .inputs__wrapper::after {
+  content: url(../../images/required_star.svg);
+  position: absolute;
+  right: 20px;
+  /* Расстояние от края поля ввода до звездочки */
+  top: 50%;
+  z-index: 100;
+  transform: translateY(-50%);
+}
+
+.consultation__form-section .consultation__form .inputs input,
+.consultation__form-section .consultation__form .inputs__wrapper input {
+  position: relative;
   width: 323px;
-  padding: 20px 0 20px 20px;
+  padding: 20px 20px 20px 20px;
   border-radius: 15px;
   border: 1px solid #82898B;
+  transition: all 0.3s ease;
+}
+
+.consultation__form-section .consultation__form .inputs input:active,
+.consultation__form-section .consultation__form .inputs__wrapper input:active {
+  border: 1px solid #274ED0;
+}
+
+.consultation__form-section .consultation__form .inputs input:focus,
+.consultation__form-section .consultation__form .inputs__wrapper input:focus {
+  border: 1px solid #274ED0;
 }
 
 .consultation__form-section .consultation__form .consents {
@@ -1356,6 +1387,20 @@ button.swiper-pagination-bullet {
 
 .consultation__form-section .consultation__form .consents .form__button {
   padding: 20px 40px;
+}
+
+.consultation__form-section .consultation__form .inputs input {
+  position: relative;
+}
+
+.consultation__form-section .consultation__form .inputs input::after {
+  content: url(../../images/required_star.svg);
+  position: absolute;
+  right: 10px;
+  /* Расстояние от края поля ввода до звездочки */
+  top: 50%;
+  z-index: 1000000;
+  transform: translateY(-50%);
 }
 
 .consultation {
@@ -2384,9 +2429,12 @@ button.swiper-pagination-bullet {
   transition: background-size 0.3s ease;
 }
 
+.search__select {
+  position: relative;
+}
+
 .dropdown__link-selector {
   width: 100%;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2407,11 +2455,14 @@ button.swiper-pagination-bullet {
 }
 
 .dropdown__content-selector {
+  max-height: 200px;
+  overflow-y: scroll;
   width: 100%;
   position: absolute;
-  top: 30px;
-  left: -20px;
+  top: 72px;
+  left: 0;
   z-index: 1200;
+  border: 1px solid #82898B;
   background-color: #FFFFFF;
   border-radius: 15px;
   display: none;
@@ -2552,7 +2603,7 @@ button.swiper-pagination-bullet {
 }
 
 .direction__about-slider .slide__item-services .slide__item-servicesHeader svg {
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 
 .direction__about-slider .slide__item-services:hover {
@@ -2930,7 +2981,7 @@ button.swiper-pagination-bullet {
   padding: 20px;
   border-radius: 15px;
   border: 1px solid #82898B;
-  max-height: 779px;
+  max-height: 800px;
 }
 
 .reviews__inner .reviews__form .reviews__form-header {
@@ -2964,7 +3015,6 @@ button.swiper-pagination-bullet {
   border: 1px solid #82898B;
   padding: 20px;
   width: 100%;
-  margin-bottom: 20px;
   font-family: Gilroy-Regular;
   font-size: clamp(14px, 1.25vw, 18px);
   color: #82898B;
@@ -2992,6 +3042,7 @@ button.swiper-pagination-bullet {
 }
 
 .reviews__inner .reviews__form .reviews__form-selector__doctor {
+  position: relative;
   font-family: Gilroy-Regular;
   font-size: clamp(14px, 1.25vw, 18px);
   color: #505759;
@@ -3064,6 +3115,22 @@ button.swiper-pagination-bullet {
 .reviews__inner .reviews__form .reviews__form-button {
   text-align: center;
   margin-top: 50px;
+}
+
+.inputs__wrapper-reviews {
+  margin: 0;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.inputs__wrapper-reviews::after {
+  content: url(../../images/required_star.svg);
+  position: absolute;
+  right: 20px;
+  /* Расстояние от края поля ввода до звездочки */
+  top: 50%;
+  z-index: 100;
+  transform: translateY(-50%);
 }
 
 .custom-checkbox {
@@ -3310,7 +3377,7 @@ input[type=radio]:checked::before {
 }
 
 .why .why__inner .slide__item-services {
-  padding: 30px;
+  padding: 20px;
   font-family: Gilroy-Semibold;
   font-size: clamp(18px, 1.66vw, 24px);
   border-radius: 15px;
@@ -3536,7 +3603,7 @@ input[type=radio]:checked::before {
 }
 
 .prices__block-menu .prices__menu-item:hover {
-  box-shadow: 0px 0px 30px 8px rgba(0, 0, 0, 0.1), 0px 10px 10px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 4px rgba(34, 60, 80, 0.17);
 }
 
 .prices__block {
@@ -4109,7 +4176,8 @@ footer {
     margin-bottom: 20px;
   }
 
-  .consultation__form-section .consultation__form .inputs input {
+  .consultation__form-section .consultation__form .inputs input,
+  .consultation__form-section .consultation__form .inputs .inputs__wrapper {
     width: 100%;
   }
 
@@ -4649,11 +4717,11 @@ footer {
   }
 
   .direction__about-slider {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 
   .doctors__inner {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 
   .doctor__inner .doctor__description {
@@ -4678,11 +4746,11 @@ footer {
   }
 
   .public__inner {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 
   .reviews__inner {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 
   .reviews__item-header {
@@ -4750,7 +4818,7 @@ footer {
   .why,
   .documents,
   .vacancy {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 
   .prices__block .prices__block-price__list .price__list-reception .reception__items .reception__item p {
@@ -4762,7 +4830,7 @@ footer {
   }
 
   .prices {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 
   .for__patients-menu {
@@ -4770,7 +4838,7 @@ footer {
   }
 
   .legal__information {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 
   .container {
@@ -4821,6 +4889,29 @@ footer {
   .doctor__inner .doctor__description .doctor__info p {
     width: 180px;
     font-size: 14px;
+  }
+
+  .doctor__inner .doctor__description .doctor__info p {
+    width: 160px;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .direction__about-slider .slide__item-services {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 342px) {
+  .reviews__inner .reviews__form .reviews__form-rating {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .vacancy .vacancy__inner .vacancy__items .vacancy__item {
+    padding: 10px;
   }
 }
 

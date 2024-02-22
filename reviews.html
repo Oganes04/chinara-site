@@ -241,8 +241,15 @@
                         </div>
                         <span class="reviews__form-rating-span"> - Ваша оценка</span>
                     </div>
-                    <input class="reviews__form-name" type="text" id="name" name="name" placeholder="Ваше ФИО" required>
-                    <input id="tel" value="" class="tel reviews__form-tel" placeholder="+7 (xxx) xxx - xx - xx" required>
+                    
+                    
+                    <div class="inputs__wrapper-reviews">
+                        <input class="reviews__form-name" type="text" id="name" name="name" placeholder="Ваше ФИО" required>
+                    </div>
+
+                    <div class="inputs__wrapper-reviews">
+                        <input id="tel" value="" class="tel reviews__form-tel" placeholder="+7 (xxx) xxx - xx - xx" required>
+                    </div>
                     
                     <div class="reviews__form-selection">
                         <div class="reviews__form-selection-item">
@@ -256,11 +263,21 @@
                     </div>
 
                     <div class="reviews__form-selector__doctor" id="doctorSelector">
-                        <select class="reviews__form-select__doctor" id="doctorList" name="doctorList">
-                            <option value="">Врач</option>
-                            <option value="name1">Османова Эльмаз Руслановна</option>
-                            <option value="name2">сманова Эльмаз Руслановна</option>
-                        </select>
+                 
+                            <div class="dropdown__link-selector">
+                                <div href="for_patients.html" class="selector__link dropdown__link-selector">
+                                    <p class="selected__direction">Категория</p>
+                                    <img class="dropdown__row" src="../../images/dropdown__row.svg" alt="">      
+                                </div>
+                                <div class="dropdown__content-selector" style="box-shadow: 0px 0px 17px 11px rgba(0,0,0,0.1);">
+                                    <p>Османова Эльмаз Руслановна</p>
+                                    <p>Османова Эльмаз Руслановна</p>
+                                    <p>Османова Эльмаз Руслановна</p>
+                                    <p>Османова Эльмаз Руслановна</p>
+                                    <p>Османова Эльмаз Руслановна</p>
+                                </div>
+                            </div>
+
                     </div>
 
                     <div class="reviews__form-text">

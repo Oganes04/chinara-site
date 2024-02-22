@@ -292,7 +292,7 @@ $(document).ready(function() {
 
   // Добавляем класс 'rotate' к SVG элементу первого пункта меню
   firstMenuItem.find('svg').addClass('rotate');
-  firstMenuItem.css('box-shadow', '0px   0px   37px   8px rgba(0,0,0,0.1),0px   10px   15px -3px rgba(0,0,0,0.1)');
+  firstMenuItem.css('box-shadow', '0px 0px 10px 4px rgba(34, 60, 80, 0.17)');
 
   // Обновляем активный пункт меню
   activeMenuItem = firstMenuItem;
@@ -318,7 +318,7 @@ $(document).on('click', menuItemsSelector, function() {
 
   // Добавляем класс 'rotate' к SVG элементу текущего активного пункта меню
   $(this).find('svg').addClass('rotate');
-  $(this).css('box-shadow', '0px  0px  37px  8px rgba(0,0,0,0.1),0px  10px  15px -3px rgba(0,0,0,0.1)');
+  $(this).css('box-shadow', '0px 0px 10px 4px rgba(34, 60, 80, 0.17)');
 
   // Обновляем активный пункт меню
   activeMenuItem = $(this);
