@@ -5127,6 +5127,15 @@ footer {
     gap: 20px;
     align-items: flex-start;
   }
+
+  .search__inner .search__btn span {
+    display: none;
+  }
+
+  .search__inner .search__btn button {
+    height: 56px;
+    padding: 10px 20px;
+  }
 }
 
 @media only screen and (max-width: 450px) {
