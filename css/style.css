@@ -3986,10 +3986,16 @@ input[type=radio]:checked::before {
 }
 
 .publication__structure-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.publication__structure-header h2 {
   font-family: Gilroy-Semibold;
   font-size: clamp(24px, 2.22vw, 32px);
   color: #505759;
-  margin-bottom: 30px;
 }
 
 .slide {
