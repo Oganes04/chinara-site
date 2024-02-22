@@ -2465,6 +2465,7 @@ button.swiper-pagination-bullet {
   border: 1px solid #82898B;
   background-color: #FFFFFF;
   border-radius: 15px;
+  box-shadow: none !important;
   display: none;
 }
 
@@ -4410,7 +4411,7 @@ footer {
     position: sticky;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1201;
     background-color: #FFF;
     border-radius: 0 0 15px 15px;
     transition: all 0.4s ease-in-out;
@@ -4610,7 +4611,7 @@ footer {
     position: sticky;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1201;
     background-color: #FFF;
     border-radius: 0 0 15px 15px;
     transition: all 0.4s ease-in-out;
@@ -4940,5 +4941,29 @@ footer {
     overflow-y: scroll;
     transform: translateY(0);
     padding-bottom: 200px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 460px) {
+  .header__adaptive .nav.open {
+    padding: 0;
+    gap: 10px;
+    overflow-y: scroll;
+    padding-bottom: 150px;
+  }
+
+  .header__adaptive .nav {
+    transform: translateY(-140vh);
+  }
+
+  .header__adaptive .nav.open {
+    padding: 0;
+    gap: 10px;
+    overflow-y: scroll;
+    padding-bottom: 150px;
+  }
+
+  .header__adaptive .nav {
+    transform: translateY(-140vh);
   }
 }
